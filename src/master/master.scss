@@ -1,0 +1,13 @@
+@import "../resources/styles/variables.scss";
+
+body {
+    background-color: $light-black;
+}
+
+.master {
+    color: $light-red;
+}
+
+.icon path {
+    fill: red;
+}
