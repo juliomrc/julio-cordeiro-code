@@ -1,14 +1,17 @@
 import React from "react";
-import { Router } from "./routing/Router";
 import { useAnimateAndRemovePreloader } from "./useAnimateAndRemovePreloader";
-import styles from "./master.scss";
+import { GlobalProviders } from "./global-providers";
+import { MasterLayout } from "./master-layout";
+import { Router } from "./routing";
 
 export const Master: React.FC = () => {
     useAnimateAndRemovePreloader();
 
     return (
-        <div className={styles.master}>
-            <Router />
-        </div>
+        <GlobalProviders>
+            <MasterLayout>
+                <Router />
+            </MasterLayout>
+        </GlobalProviders>
     );
 };
