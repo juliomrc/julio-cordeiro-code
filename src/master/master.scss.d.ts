@@ -1,6 +1,5 @@
 declare namespace MasterScssNamespace {
     export interface IMasterScss {
-        icon: string;
         master: string;
     }
 }

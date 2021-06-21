@@ -13,6 +13,7 @@ module.exports = {
     moduleNameMapper: {
         "@components/(.*)$": "<rootDir>/src/components/$1",
         "@resources/(.*)$": "<rootDir>/src/resources/$1",
+        "@modules/(.*)$": "<rootDir>/src/modules/$1",
         // https://jestjs.io/docs/webpack
         "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
             "<rootDir>/.tests/__mocks__/file-mock.js",

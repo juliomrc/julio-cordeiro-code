@@ -1,13 +1,13 @@
 @import "../resources/styles/variables.scss";
+@import "../resources/styles/fonts.scss";
 
 body {
-    background-color: $light-black;
+    font-family: "Roboto", monospace;
+    background-color: $background;
 }
 
 .master {
-    color: $light-red;
-}
-
-.icon path {
-    fill: red;
+    color: $onBackground;
+    margin: auto;
+    max-width: 1080px;
 }

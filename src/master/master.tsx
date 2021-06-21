@@ -1,14 +1,14 @@
 import React from "react";
-
-import { Loader } from "@components/loader";
+import { Router } from "./routing/Router";
+import { useAnimateAndRemovePreloader } from "./useAnimateAndRemovePreloader";
 import styles from "./master.scss";
-import ReactIcon from "@resources/icons/react.svg";
 
 export const Master: React.FC = () => {
+    useAnimateAndRemovePreloader();
+
     return (
         <div className={styles.master}>
-            <ReactIcon className={styles.icon} width={100} />
-            <Loader />
+            <Router />
         </div>
     );
 };

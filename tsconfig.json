@@ -23,7 +23,8 @@
         "skipLibCheck": true,
         "paths": {
             "@components/*": ["./src/components/*"],
-            "@resources/*": ["./src/resources/*"]
+            "@resources/*": ["./src/resources/*"],
+            "@modules/*": ["./src/modules/*"]
         }
     },
     "exclude": ["node_modules", "dist"]
