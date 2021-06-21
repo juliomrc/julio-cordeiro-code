@@ -1,7 +1,7 @@
-import { Link } from "@components/inputs/link";
-import { Typography } from "@material-ui/core";
-import { routes } from "@resources/constants/routes";
 import React from "react";
+import { Link } from "@components/inputs/link";
+import { Typography } from "@components/typography";
+import { routes } from "@resources/constants/routes";
 
 export const Homepage: React.FC = () => {
     return (

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Switch } from "@components/inputs/switch";
 import { ThemeContext, AvailableThemes } from "./ThemeContext";
 import { FormControlLabel } from "@material-ui/core";
+import { Typography } from "@components/typography";
 
 export const ThemeSwitch: React.FC = () => {
     const { selectedTheme, setSelectedTheme } = useContext(ThemeContext);
@@ -23,7 +24,7 @@ export const ThemeSwitch: React.FC = () => {
                     onChange={toggleTheme}
                 />
             }
-            label={"Dark mode"}
+            label={<Typography>Dark mode</Typography>}
         />
     );
 };

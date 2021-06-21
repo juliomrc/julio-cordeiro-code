@@ -8,7 +8,7 @@ import {
 
 export const ThemeProvider: React.FC = ({ children }) => {
     const [selectedTheme, setSelectedTheme] = useState<AvailableThemes>(
-        AvailableThemes.Dark,
+        getUserPreferredDefaultTheme(),
     );
 
     return (
@@ -18,4 +18,14 @@ export const ThemeProvider: React.FC = ({ children }) => {
             </MaterialThemeProvider>
         </ThemeContext.Provider>
     );
+};
+
+const getUserPreferredDefaultTheme = () => {
+    if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        return AvailableThemes.Dark;
+    }
+    return AvailableThemes.Light;
 };
