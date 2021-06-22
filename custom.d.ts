@@ -7,3 +7,8 @@ declare module "*.png" {
     const imageSrc: string;
     export default imageSrc;
 }
+
+declare module "*.pdf" {
+    const imageSrc: string;
+    export default imageSrc;
+}

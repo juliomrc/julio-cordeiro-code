@@ -41,7 +41,7 @@ const fontLoaders = {
 };
 
 const assetLoaders = {
-    test: /\.(png|jpe?g|gif|ico)$/i,
+    test: /\.(png|jpe?g|gif|ico|pdf)$/i,
     type: "asset",
 };
 

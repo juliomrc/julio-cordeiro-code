@@ -2,11 +2,19 @@ import React from "react";
 import { Link } from "@components/inputs/link";
 import { SectionHeader } from "../../../components/text/section-header";
 import { SectionParagraph } from "../../../components/text/section-paragraph";
+import pdfCV from "./CV_Julio_Cordeiro.pdf";
 
 export const Experience: React.FC = () => {
     return (
         <>
             <SectionHeader>My experience</SectionHeader>
+            <SectionParagraph>
+                TL;DR: You can get my CV{" "}
+                <Link href={pdfCV} target="_blank">
+                    here
+                </Link>
+                .
+            </SectionParagraph>
             <SectionParagraph>
                 I started programming professionally in January 2018 as a
                 consultant for{" "}
