@@ -29,7 +29,6 @@ module.exports = {
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "react/prop-types": "off",
         "react/no-unescaped-entities": "off",
-        "operator-linebreak": "before",
         "prettier/prettier": [
             "error",
             {
