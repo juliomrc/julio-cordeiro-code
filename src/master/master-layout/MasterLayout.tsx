@@ -11,7 +11,9 @@ export const MasterLayout: React.FC = ({ children }) => {
     return (
         <main className={styles.root}>
             <CssBaseline />
-            <ThemeSwitch />
+            <header className={styles.header}>
+                <ThemeSwitch />
+            </header>
             <div className={styles.websiteContent}>{children}</div>
             <BottomNavigation className={styles.bottomNavigation} />
         </main>

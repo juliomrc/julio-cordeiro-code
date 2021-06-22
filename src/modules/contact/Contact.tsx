@@ -1,6 +1,7 @@
 import React from "react";
 import { useFormManager } from "react-simple-form-manager";
-import { Typography } from "@components/typography";
+import { Typography } from "@components/text/typography";
+import { PageHeader } from "@components/text/page-header";
 
 export const Contact: React.FC = () => {
     const formManager = useFormManager({
@@ -8,9 +9,12 @@ export const Contact: React.FC = () => {
     });
 
     return (
-        <form onSubmit={formManager.handleSubmit}>
-            <Typography>Let's get in touch.</Typography>
-        </form>
+        <>
+            <PageHeader>Contact</PageHeader>
+            <form onSubmit={formManager.handleSubmit}>
+                <Typography>Let's get in touch.</Typography>
+            </form>
+        </>
     );
 };
 

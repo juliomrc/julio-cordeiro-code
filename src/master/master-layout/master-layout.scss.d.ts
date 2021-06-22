@@ -1,6 +1,6 @@
 declare namespace MasterLayoutScssNamespace {
     export interface IMasterLayoutScss {
-        masterLayout: string;
+        body: string;
     }
 }
 

@@ -1,5 +1,8 @@
 @import "../../resources/styles/fonts.scss";
+@import "../../resources/styles/custom-scrollbar.scss";
 
 body {
     font-family: "Roboto", monospace;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }

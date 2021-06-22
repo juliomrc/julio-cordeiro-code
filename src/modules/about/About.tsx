@@ -1,17 +1,22 @@
 import React from "react";
-import { Link } from "@components/inputs/link";
-import { routes } from "@resources/constants/routes";
-import { Typography } from "@components/typography";
+import { PageHeader } from "@components/text/page-header";
+import { Experience } from "./experience";
+import { Myself } from "./myself";
+import { useAboutStyles } from "./useAboutStyles";
 
 export const About: React.FC = () => {
+    const styles = useAboutStyles();
+
     return (
-        <div>
-            <Link to={routes.homepage}>Homepage</Link>
-            <Typography>
-                Hi! My name is Julio and I am a frontend developer. In this
-                website, I will create examples of some of the work I've created
-                during my career.
-            </Typography>
+        <div className={styles.about}>
+            <PageHeader>About</PageHeader>
+            <Myself />
+            <Experience />
+            <Experience />
+            <Experience />
+            <Experience />
+            <Experience />
+            <Experience />
         </div>
     );
 };

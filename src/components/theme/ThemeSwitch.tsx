@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Switch } from "@components/inputs/switch";
 import { ThemeContext, AvailableThemes } from "./ThemeContext";
-import { Typography } from "@components/typography";
+import { Typography } from "@components/text/typography";
 import { useThemeSwitchStyles } from "./useThemeSwitchStyles";
 
 export const ThemeSwitch: React.FC = () => {
