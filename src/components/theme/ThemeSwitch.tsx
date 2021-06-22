@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Switch } from "@components/inputs/switch";
 import { ThemeContext, AvailableThemes } from "./ThemeContext";
-import { FormControlLabel } from "@material-ui/core";
 import { Typography } from "@components/typography";
+import { useThemeSwitchStyles } from "./useThemeSwitchStyles";
 
 export const ThemeSwitch: React.FC = () => {
     const { selectedTheme, setSelectedTheme } = useContext(ThemeContext);
@@ -15,16 +15,18 @@ export const ThemeSwitch: React.FC = () => {
         setSelectedTheme(AvailableThemes.Light);
     };
 
+    const styles = useThemeSwitchStyles();
+
     return (
-        <FormControlLabel
-            control={
+        <Typography>
+            <label className={styles.themeSwitch}>
+                Light mode
                 <Switch
-                    color="primary"
                     checked={selectedTheme === AvailableThemes.Dark}
                     onChange={toggleTheme}
                 />
-            }
-            label={<Typography>Dark mode</Typography>}
-        />
+                Dark mode
+            </label>
+        </Typography>
     );
 };

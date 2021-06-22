@@ -5,6 +5,16 @@ import {
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 
-export const Link: React.FC<MaterialUILinkProps<NavLink>> = (props) => {
-    return <MaterialUILink component={NavLink} {...props} />;
+type AnchorTarget = "_blank" | "_self";
+
+interface LinkProps extends Partial<MaterialUILinkProps<NavLink>> {
+    target?: AnchorTarget;
+}
+
+export const Link: React.FC<LinkProps> = (props) => {
+    if (props.to) {
+        return <MaterialUILink component={NavLink} {...props} />;
+    }
+
+    return <MaterialUILink {...props} />;
 };
