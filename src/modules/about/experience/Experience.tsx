@@ -9,18 +9,20 @@ import { ExperienceSection } from "./ExperienceSection";
 export const Experience: React.FC = () => {
     return (
         <>
-            <StepperSection stepId="Experience">
-                <SectionHeader>My experience</SectionHeader>
-                <Typography variant="h4">ITSector</Typography>
-                <SectionParagraph>
-                    I started programming professionally in 01/2018 as a
-                    consultant for{" "}
-                    <Link target={"_blank"} href="http://www.itsector.pt/">
-                        ITSector
-                    </Link>{" "}
-                    where I had a one month training in .NET MVC and Webforms.
-                </SectionParagraph>
-            </StepperSection>
+            <SectionHeader>
+                <StepperSection stepId="Experience">
+                    My experience
+                </StepperSection>
+            </SectionHeader>
+            <Typography variant="h4">ITSector</Typography>
+            <SectionParagraph>
+                I started programming professionally in 01/2018 as a consultant
+                for{" "}
+                <Link target={"_blank"} href="http://www.itsector.pt/">
+                    ITSector
+                </Link>{" "}
+                where I had a one month training in .NET MVC and Webforms.
+            </SectionParagraph>
             <ExperienceSection
                 stepId={"Puzzle"}
                 title={"Puzzle"}

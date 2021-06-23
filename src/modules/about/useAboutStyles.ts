@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useAboutStyles = makeStyles((theme) => {
-    const stepperWidth = 150;
+    const stepperWidth = 190;
     const contentWidth = 1080;
 
     return {
@@ -12,6 +12,8 @@ export const useAboutStyles = makeStyles((theme) => {
             position: "fixed",
             left: 0,
             width: stepperWidth,
+            borderTopRightRadius: "12px",
+            borderBottomRightRadius: "12px",
         },
         content: {
             textAlign: "justify",

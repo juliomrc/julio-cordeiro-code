@@ -21,8 +21,8 @@ export const StepperSection: React.FC<StepperSectionProps> = ({
     }, [inView]);
 
     return (
-        <section ref={ref} id={stepId}>
+        <div ref={ref} id={stepId}>
             {children}
-        </section>
+        </div>
     );
 };

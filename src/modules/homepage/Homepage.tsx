@@ -21,7 +21,7 @@ export const Homepage: React.FC = () => {
             />
             <SectionParagraph>
                 My name is Julio Cordeiro, I am a frontend developer and this is
-                my <i>portfolio / playground</i> website.
+                my <i>portfolio / playground / CV</i> website.
             </SectionParagraph>
             <SectionParagraph>
                 Check out my <Link to={routes.about}>profile</Link> and maybe

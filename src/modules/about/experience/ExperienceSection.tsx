@@ -18,9 +18,9 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
     technologies,
 }) => {
     return (
-        <StepperSection stepId={stepId}>
+        <>
             <Typography color="textPrimary" variant="h5">
-                {title}
+                <StepperSection stepId={stepId}>{title}</StepperSection>
             </Typography>
             <SectionParagraph>{description}</SectionParagraph>
             <SectionParagraph>
@@ -32,6 +32,6 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                     return `${item}, `;
                 })}
             </SectionParagraph>
-        </StepperSection>
+        </>
     );
 };
