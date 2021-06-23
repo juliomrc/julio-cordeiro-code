@@ -1,13 +1,14 @@
 import React from "react";
 import { SectionHeader } from "../../../components/text/section-header";
 import { SectionParagraph } from "../../../components/text/section-paragraph";
+import { StepperSection } from "../about-section-stepper";
 import { MyPhoto } from "./my-photo";
 import { useMyselfStyles } from "./useMyselfStyles";
 
 export const Myself: React.FC = () => {
     const styles = useMyselfStyles();
     return (
-        <>
+        <StepperSection stepId={"Myself"}>
             <SectionHeader>Myself</SectionHeader>
             <div className={styles.myself}>
                 <div>
@@ -35,6 +36,6 @@ export const Myself: React.FC = () => {
                 </div>
                 <MyPhoto />
             </div>
-        </>
+        </StepperSection>
     );
 };
