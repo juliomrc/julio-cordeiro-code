@@ -5,5 +5,5 @@ import {
 } from "@material-ui/core";
 
 export const Typography: React.FC<TypographyProps> = (props) => {
-    return <MaterialUITypography color="textSecondary" {...props} />;
+    return <MaterialUITypography {...props} />;
 };

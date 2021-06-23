@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 
-export const useAnimateAndRemovePreloader = () => {
+export const useAnimateAndRemovePreloader = (
+    onPreloaderRemoved: () => void,
+) => {
     const minimumPreloaderTime = 1000;
     const animationDuration = 500;
 
@@ -9,10 +11,12 @@ export const useAnimateAndRemovePreloader = () => {
 
         const animatePreloaderTimeout = window.setTimeout(() => {
             const preloader = document.getElementById("preloader");
+            preloader?.classList.remove("ripple");
             preloader?.classList.add("exit-animation");
 
             removePreloaderTimeout = window.setTimeout(() => {
                 preloader?.remove();
+                onPreloaderRemoved();
             }, animationDuration);
         }, minimumPreloaderTime);
 

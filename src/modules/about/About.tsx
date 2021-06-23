@@ -7,6 +7,7 @@ import {
     AboutSectionStepper,
     StepperContextProvider,
 } from "./about-section-stepper";
+import { CV } from "./cv";
 
 export const About: React.FC = () => {
     const styles = useAboutStyles();
@@ -17,6 +18,7 @@ export const About: React.FC = () => {
                 <AboutSectionStepper className={styles.stepper} />
                 <div className={styles.content}>
                     <PageHeader>About</PageHeader>
+                    <CV />
                     <Myself />
                     <Experience />
                 </div>

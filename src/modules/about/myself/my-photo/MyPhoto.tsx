@@ -1,9 +1,17 @@
 import React from "react";
 import { Image } from "@components/image";
-import cvPhoto from "./CV_Photo.png";
+import { Typography } from "@components/text/typography";
 import { useMyPhotoStyles } from "./useMyPhotoStyles";
+import cvPhoto from "./CV_Photo.png";
 
 export const MyPhoto: React.FC = () => {
     const styles = useMyPhotoStyles();
-    return <Image src={cvPhoto} className={styles.myPhoto} />;
+    return (
+        <div className={styles.container}>
+            <Image src={cvPhoto} className={styles.photo} />
+            <Typography className={styles.description}>
+                Hey, this is me!
+            </Typography>
+        </div>
+    );
 };
