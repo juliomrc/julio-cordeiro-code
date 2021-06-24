@@ -11,7 +11,7 @@ export const Experience: React.FC = () => {
         <>
             <SectionHeader>
                 <StepperSection stepId="Experience">
-                    My experience
+                    ... my experience
                 </StepperSection>
             </SectionHeader>
             <Typography variant="h4">ITSector</Typography>

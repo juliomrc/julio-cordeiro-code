@@ -6,7 +6,7 @@ import { SectionParagraph } from "@components/text/section-paragraph";
 export const HomepageDescription = () => (
     <>
         <SectionParagraph>
-            My name is Julio Cordeiro, I am a frontend developer and this is my{" "}
+            My name is Júlio Cordeiro, I am a frontend developer and this is my{" "}
             <i>portfolio / playground / CV</i> website.
         </SectionParagraph>
         <SectionParagraph>

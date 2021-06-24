@@ -27,7 +27,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                 <b>Technologies: </b>{" "}
                 {technologies.map((item, index) => {
                     if (index === technologies.length - 1) {
-                        return item;
+                        return `${item}.`;
                     }
                     return `${item}, `;
                 })}

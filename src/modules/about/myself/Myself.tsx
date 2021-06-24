@@ -8,10 +8,10 @@ import { MyPhoto } from "./my-photo";
 export const Myself: React.FC = () => {
     return (
         <StepperSection stepId={"Myself"}>
-            <SectionHeader>Myself</SectionHeader>
+            <SectionHeader>... myself</SectionHeader>
             <MyPhoto />
             <SectionParagraph>
-                Hi! Let me present myself again: My name is Julio Cordeiro and I
+                Hi! Let me present myself again: My name is Júlio Cordeiro and I
                 am a [frontend] web developer.
             </SectionParagraph>
             <SectionParagraph>
@@ -59,9 +59,9 @@ export const Myself: React.FC = () => {
                 took the best of me and now I call this city my home.
             </SectionParagraph>
             <SectionParagraph>
-                Ah, and what do I like? I like to play both video and board
-                games, I like to travel a bit, but mostly I like good food and
-                good music.
+                Ah, and what do I like? I like learning new things and progress
+                in my career, I like to play video games, I like to travel a
+                bit, but mostly I like good food and good music.
             </SectionParagraph>
         </StepperSection>
     );
