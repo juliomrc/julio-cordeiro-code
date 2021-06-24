@@ -5,10 +5,12 @@ import { useIsPreloaderActive } from "@components/preloader-context";
 
 interface AnimatedPageHeaderProps {
     strings: string[];
+    onAnimationCompleted: () => void;
 }
 
 export const AnimatedPageHeader: React.FC<AnimatedPageHeaderProps> = ({
     strings,
+    onAnimationCompleted,
 }) => {
     const isPreloaderActive = useIsPreloaderActive();
 
@@ -20,6 +22,7 @@ export const AnimatedPageHeader: React.FC<AnimatedPageHeaderProps> = ({
                 <TypedAnimation
                     startDelay={500}
                     backSpeed={30}
+                    onComplete={onAnimationCompleted}
                     strings={strings}
                 />
             )}

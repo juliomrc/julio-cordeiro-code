@@ -14,11 +14,18 @@ export const useAboutStyles = makeStyles((theme) => {
             width: stepperWidth,
             borderTopRightRadius: "12px",
             borderBottomRightRadius: "12px",
+
+            [theme.breakpoints.down("sm")]: {
+                display: "none",
+            },
         },
         content: {
             textAlign: "justify",
             [theme.breakpoints.down(contentWidth + 2 * stepperWidth)]: {
                 marginLeft: stepperWidth,
+            },
+            [theme.breakpoints.down("sm")]: {
+                marginLeft: "auto",
             },
             flex: 1,
         },

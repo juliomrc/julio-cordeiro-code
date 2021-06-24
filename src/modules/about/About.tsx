@@ -17,8 +17,10 @@ export const About: React.FC = () => {
             <div className={styles.about}>
                 <AboutSectionStepper className={styles.stepper} />
                 <div className={styles.content}>
-                    <PageHeader>About</PageHeader>
-                    <CV />
+                    <PageHeader>
+                        About
+                        <CV />
+                    </PageHeader>
                     <Myself />
                     <Experience />
                 </div>

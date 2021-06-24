@@ -83,7 +83,12 @@ export const Experience: React.FC = () => {
                         they chose React. The new website was set up by two
                         architects for about 4 months at which point me and
                         several other developers joined to start working on
-                        implementing new processes.
+                        implementing new processes. I worked in every aspect of
+                        the website, from forms to bundle management and webview
+                        integration. This was a large scale application and also
+                        a large scale team. My team had two or three FE
+                        developers, but there were between five and ten
+                        different teams working on the same product.
                     </>
                 }
             />
@@ -107,7 +112,23 @@ export const Experience: React.FC = () => {
                     "RWD",
                     "styled-components",
                 ]}
-                description={<></>}
+                description={
+                    <>
+                        After working in the corporate world, I wanted to try
+                        the opposite: a small startup environment. Currently I
+                        work for{" "}
+                        <Link
+                            target="_blank"
+                            href="https://www.memcare.com/en/"
+                        >
+                            Memcare
+                        </Link>
+                        . We offer a few different products, but mostly I work
+                        on a CRM for funeral houses. I am responsible for the
+                        whole FE ecosystem and the whole development team has
+                        two FE, two BE developers and one QA tester.
+                    </>
+                }
             />
         </>
     );

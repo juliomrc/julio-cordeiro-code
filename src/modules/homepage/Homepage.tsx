@@ -1,36 +1,33 @@
-import React from "react";
-import { Link } from "@components/inputs/link";
-import { routes } from "@resources/constants/routes";
-import { SectionParagraph } from "@components/text/section-paragraph";
-import { AnimatedPageHeader } from "@components/text/animated-page-header/AnimatedPageHeader";
+import React, { useState } from "react";
+import { Presets } from "react-component-transition";
+import { AnimatedPageHeader } from "@components/text/animated-page-header";
 import { useHomepageStyles } from "./useHomepageStyles";
+import { HomepageDescription } from "./HomepageDescription";
 
 export const Homepage: React.FC = () => {
+    const [showDescription, setShowDescription] = useState(false);
+
+    const handleTypingIsComplete = () => {
+        setShowDescription(true);
+    };
+
     const styles = useHomepageStyles();
 
     return (
         <div className={styles.centeredContent}>
             <AnimatedPageHeader
+                onAnimationCompleted={handleTypingIsComplete}
                 strings={[
                     "Welcome to my website",
                     "Welcome to my playground",
                     "Welcome to my CV?",
-                    "Welcome to my CV?.. humm ^1000",
+                    "Welcome to my CV?.^500.^500.",
                     "Welcome! :)",
                 ]}
             />
-            <SectionParagraph>
-                My name is Julio Cordeiro, I am a frontend developer and this is
-                my <i>portfolio / playground / CV</i> website.
-            </SectionParagraph>
-            <SectionParagraph>
-                Check out my <Link to={routes.about}>profile</Link> and maybe
-                follow me on{" "}
-                <Link target="_blank" href={"https://github.com/juliomrc"}>
-                    github
-                </Link>
-                ? :)
-            </SectionParagraph>
+            <Presets.TransitionFade>
+                {showDescription && <HomepageDescription />}
+            </Presets.TransitionFade>
         </div>
     );
 };

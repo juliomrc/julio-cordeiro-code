@@ -7,7 +7,7 @@ import pdfCV from "./CV_Julio_Cordeiro.pdf";
 export const CV: React.FC = () => {
     return (
         <SectionParagraph>
-            TL;DR: You can get my CV{" "}
+            TL;DR: You can download my CV{" "}
             <Link href={pdfCV} target="_blank">
                 here
             </Link>
