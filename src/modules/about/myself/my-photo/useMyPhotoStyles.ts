@@ -10,6 +10,7 @@ export const useMyPhotoStyles = makeStyles((theme) => ({
     },
     photo: {
         height: "200px",
+        borderRadius: "40%",
     },
     description: {
         textAlign: "center",

@@ -1,0 +1,41 @@
+import { routes } from "@resources/constants/routes";
+import React from "react";
+import { QuickNavigationItem } from "./QuickNavigationItem";
+import { useQuickNavigationStyles } from "./useQuickNavigationStyles";
+
+const navigationItems = [
+    {
+        label: "Homepage",
+        route: routes.homepage,
+    },
+    {
+        label: "About",
+        route: routes.about,
+    },
+    {
+        label: "Blog",
+        route: routes.blog,
+    },
+    {
+        label: "Contact",
+        route: routes.contact,
+    },
+];
+
+export const QuickNavigation: React.FC = () => {
+    const styles = useQuickNavigationStyles();
+    return (
+        <div className={styles.container}>
+            {navigationItems.map((item, index) => {
+                return (
+                    <>
+                        <QuickNavigationItem key={index} to={item.route}>
+                            {item.label}
+                        </QuickNavigationItem>
+                        {index !== navigationItems.length - 1 && " | "}
+                    </>
+                );
+            })}
+        </div>
+    );
+};

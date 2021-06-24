@@ -1,5 +1,6 @@
 import React from "react";
 import { createMuiTheme } from "@material-ui/core/styles";
+import { PaletteOptions } from "@material-ui/core/styles/createPalette";
 
 interface ThemeContext {
     setSelectedTheme: (selectedTheme: AvailableThemes) => void;
@@ -17,10 +18,18 @@ export const ThemeContext = React.createContext<ThemeContext>({
 });
 
 export const buildTheme = (selectedTheme: AvailableThemes) => {
+    const paletteOptions: PaletteOptions = {};
+    if (selectedTheme === AvailableThemes.Light) {
+        paletteOptions.type = "light";
+        paletteOptions.background = {
+            paper: "#dce5f2",
+        };
+    } else {
+        paletteOptions.type = "dark";
+    }
+
     const defaultTheme = createMuiTheme({
-        palette: {
-            type: selectedTheme === AvailableThemes.Light ? "light" : "dark",
-        },
+        palette: paletteOptions,
     });
 
     return defaultTheme;

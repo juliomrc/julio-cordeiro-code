@@ -35,6 +35,7 @@ export const useMenuStyles = makeStyles((theme) => {
         bottomNavigation: {
             position: "fixed",
             height: footerHeight,
+            left: 0,
             bottom: `-${footerHeight}px`,
             transition: "bottom 0.5s",
         },
