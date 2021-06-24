@@ -10,11 +10,13 @@ import { routes } from "@resources/constants/routes";
 import { useBottomNavigationStyles } from "./useBottomNavigationStyles";
 
 interface BottomNavigationProps {
-    className?: string;
+    className: string;
+    onChangeNavigation: () => void;
 }
 
 export const BottomNavigation: React.FC<BottomNavigationProps> = ({
     className,
+    onChangeNavigation,
 }) => {
     const location = useLocation();
     const history = useHistory();
@@ -22,6 +24,7 @@ export const BottomNavigation: React.FC<BottomNavigationProps> = ({
         _event: React.ChangeEvent<unknown>,
         newValue: string,
     ) => {
+        onChangeNavigation();
         history.push(newValue);
     };
 

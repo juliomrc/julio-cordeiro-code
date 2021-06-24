@@ -1,8 +1,7 @@
 import React from "react";
 import { CssBaseline } from "@material-ui/core";
-import { ThemeSwitch } from "@components/theme/ThemeSwitch";
 import { useMasterLayoutStyles } from "./useMasterLayoutStyles";
-import { BottomNavigation } from "./bottom-navigation";
+import { Menu } from "./menu";
 import "./master-layout.scss";
 
 export const MasterLayout: React.FC = ({ children }) => {
@@ -11,11 +10,8 @@ export const MasterLayout: React.FC = ({ children }) => {
     return (
         <main className={styles.root}>
             <CssBaseline />
-            <header className={styles.header}>
-                <ThemeSwitch />
-            </header>
+            <Menu />
             <div className={styles.websiteContent}>{children}</div>
-            <BottomNavigation className={styles.bottomNavigation} />
         </main>
     );
 };
