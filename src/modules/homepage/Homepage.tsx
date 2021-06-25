@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Presets } from "react-component-transition";
 import { AnimatedPageHeader } from "@components/text/animated-page-header";
-import { useHomepageStyles } from "./useHomepageStyles";
 import { HomepageDescription } from "./HomepageDescription";
+import { useCommonStyles } from "@resources/styles/useCommonStyles";
 
 export const Homepage: React.FC = () => {
     const [showDescription, setShowDescription] = useState(false);
@@ -11,10 +11,10 @@ export const Homepage: React.FC = () => {
         setShowDescription(true);
     };
 
-    const styles = useHomepageStyles();
+    const styles = useCommonStyles();
 
     return (
-        <div className={styles.centeredContent}>
+        <div className={styles.centeredFullContent}>
             <AnimatedPageHeader
                 onAnimationCompleted={handleTypingIsComplete}
                 strings={[
