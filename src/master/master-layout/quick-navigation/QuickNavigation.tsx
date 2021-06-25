@@ -13,8 +13,8 @@ const navigationItems = [
         route: routes.about,
     },
     {
-        label: "Blog",
-        route: routes.blog,
+        label: "Work",
+        route: routes.work,
     },
     {
         label: "Contact",

@@ -47,8 +47,8 @@ export const BottomNavigation: React.FC<BottomNavigationProps> = ({
                 icon={<Info />}
             />
             <BottomNavigationAction
-                label="Blog"
-                value={routes.blog}
+                label="Work"
+                value={routes.work}
                 icon={<Book />}
             />
             <BottomNavigationAction

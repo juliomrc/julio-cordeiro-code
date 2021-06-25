@@ -7,6 +7,7 @@ import { AsyncContact } from "@modules/contact/AsyncContact";
 import { AsyncNoMatch } from "@modules/no-match/AsyncNoMatch";
 import { LazyRouteWrapper } from "./LazyRouteWrapper";
 import { AnimatedSwitch } from "./animatedSwitch";
+import { AsyncWork } from "@modules/work/AsyncWork";
 
 export const Routing: React.FC = () => {
     return (
@@ -20,6 +21,9 @@ export const Routing: React.FC = () => {
                 </Route>
                 <Route exact path={routes.homepage}>
                     <AsyncHomepage />
+                </Route>
+                <Route exact path={routes.work}>
+                    <AsyncWork />
                 </Route>
                 <Route>
                     <AsyncNoMatch />
