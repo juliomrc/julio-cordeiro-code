@@ -15,7 +15,7 @@ export const useContactStyles = () => {
                 minWidth: "300px",
                 maxWidth: "600px",
                 width: "100%",
-                textAlign: "left",
+                textAlign: "justify",
             },
         }))(),
     };

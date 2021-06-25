@@ -1,20 +1,19 @@
 import React from "react";
-import { useFormManager } from "react-simple-form-manager";
 import { PageHeader } from "@components/text/page-header";
 import { TextInput } from "@components/inputs/text-input";
 import { TextArea } from "@components/inputs/text-area";
 import { InputsColumn } from "@components/inputs/inputsColumn";
-import { useContactStyles } from "./useCommonStyles";
+import { useContactStyles } from "./useContactStyles";
 import { SectionParagraph } from "@components/text/section-paragraph";
 import { Button } from "@components/inputs/button";
 import { LinkedinLink } from "@components/contact-items";
 import { ContactForm, contactFormValidator } from "./contact-form-helpers";
+import { useFormManager } from "@components/form-management/use-form-manager";
 
 export const Contact: React.FC = () => {
     const formManager = useFormManager<ContactForm>({
         onSubmit: (formState) => console.log(formState),
         validators: contactFormValidator,
-        showErrorsAfter: "customTouch",
     });
 
     const styles = useContactStyles();
@@ -39,9 +38,6 @@ export const Contact: React.FC = () => {
                             "email",
                         )}
                         value={formManager.formState.email}
-                        onBlur={formManager.allowErrorVisibilityForField(
-                            "email",
-                        )}
                         error={formManager.visibleErrors.email}
                         helperText={
                             formManager.visibleErrors.email &&
@@ -54,9 +50,6 @@ export const Contact: React.FC = () => {
                             "subject",
                         )}
                         value={formManager.formState.subject}
-                        onBlur={formManager.allowErrorVisibilityForField(
-                            "subject",
-                        )}
                         error={formManager.visibleErrors.subject}
                         helperText={
                             formManager.visibleErrors.subject &&
@@ -69,9 +62,6 @@ export const Contact: React.FC = () => {
                             "body",
                         )}
                         value={formManager.formState.body}
-                        onBlur={formManager.allowErrorVisibilityForField(
-                            "body",
-                        )}
                         error={formManager.visibleErrors.body}
                         helperText={
                             formManager.visibleErrors.body &&

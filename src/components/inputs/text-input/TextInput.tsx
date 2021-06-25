@@ -1,8 +1,9 @@
 import React from "react";
-import { TextField, OutlinedTextFieldProps } from "@material-ui/core";
+import { TextField, StandardTextFieldProps } from "@material-ui/core";
 import { Presets } from "react-component-transition";
+import { ErrorMessage } from "@components/form-management/error-message";
 
-export interface TextInputProps extends Partial<OutlinedTextFieldProps> {
+export interface TextInputProps extends Partial<StandardTextFieldProps> {
     onValueChange?: (value: string) => void;
 }
 
@@ -29,7 +30,7 @@ export const TextInput: React.FC<TextInputProps> = ({
 
     const animatedHelperText = (
         <Presets.TransitionExpandVertical>
-            {!!helperText && helperText}
+            {!!helperText && <ErrorMessage>{helperText}</ErrorMessage>}
         </Presets.TransitionExpandVertical>
     );
 
@@ -38,6 +39,11 @@ export const TextInput: React.FC<TextInputProps> = ({
             value={nonNullableValue}
             onChange={handleOnChange}
             helperText={animatedHelperText}
+            FormHelperTextProps={{
+                // eslint-disable-next-line
+                // @ts-ignore - https://github.com/mui-org/material-ui/issues/20360
+                component: "div",
+            }}
             {...restProps}
         />
     );

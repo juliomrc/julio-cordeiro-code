@@ -7,5 +7,5 @@ export const TextArea: React.FC<TextInputProps> = (props) => {
 
 TextArea.defaultProps = {
     multiline: true,
-    rows: 10,
+    rows: 5,
 };
