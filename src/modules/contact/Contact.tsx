@@ -2,7 +2,7 @@ import React from "react";
 import { PageHeader } from "@components/text/page-header";
 import { TextInput } from "@components/inputs/text-input";
 import { TextArea } from "@components/inputs/text-area";
-import { InputsColumn } from "@components/inputs/inputsColumn";
+import { InputsColumn } from "@components/inputs/inputs-column";
 import { useContactStyles } from "./useContactStyles";
 import { SectionParagraph } from "@components/text/section-paragraph";
 import { Button } from "@components/inputs/button";
