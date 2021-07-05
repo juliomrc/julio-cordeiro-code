@@ -7,7 +7,7 @@ export const FormManagement: React.FC = () => {
     return (
         <>
             <Typography>
-                Professionally, I didn't work with anything besides the popular{" "}
+                Professionally, I worked with the popular{" "}
                 <Link target="_blank" to={"https://formik.org/"}>
                     Formik
                 </Link>{" "}

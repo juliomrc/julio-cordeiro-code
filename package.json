@@ -76,7 +76,7 @@
         "react-intersection-observer": "^8.32.0",
         "react-router-dom": "^5.2.0",
         "react-router-navigation-prompt": "^1.8.14",
-        "react-simple-form-manager": "^1.1.0",
+        "react-simple-form-manager": "^1.1.1",
         "typed.js": "^2.0.12"
     }
 }
