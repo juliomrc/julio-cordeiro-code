@@ -1,12 +1,6 @@
 import { makeStyles } from "@material-ui/core";
+import { centeredFullContent } from "./commonStyles";
 
 export const useCommonStyles = makeStyles(() => ({
-    centeredFullContent: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100%",
-        width: "100%",
-    },
+    centeredFullContent,
 }));
