@@ -5,6 +5,7 @@ export const useWorkExampleStyles = makeStyles(() => {
         paper: {
             padding: "10px",
             marginBottom: "10px",
+            position: "relative",
         },
         header: {
             display: "flex",

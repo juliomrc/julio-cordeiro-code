@@ -6,6 +6,7 @@ import { WorkExample } from "./work-example";
 import { FormManagement } from "./examples/form-management";
 import { NavigationBlockerExample } from "./examples/navigation-blocker-example";
 import { DragAndDrop } from "./examples/drag-and-drop";
+import { RequestStateHandling } from "./examples/request-state-handling";
 
 export const Work: React.FC = () => {
     const styles = useWorkStyles();
@@ -27,6 +28,9 @@ export const Work: React.FC = () => {
             </WorkExample>
             <WorkExample header={"Drag and drop"}>
                 <DragAndDrop />
+            </WorkExample>
+            <WorkExample header={"Request state handling"}>
+                <RequestStateHandling />
             </WorkExample>
         </div>
     );

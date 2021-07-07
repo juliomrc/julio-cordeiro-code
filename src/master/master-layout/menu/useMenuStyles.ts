@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+import { zIndexStack } from "@resources/styles/zIndexStack";
 
 export const useMenuStyles = makeStyles((theme) => {
     const footerHeight = 56;
@@ -8,7 +9,7 @@ export const useMenuStyles = makeStyles((theme) => {
             position: "fixed",
             top: 0,
             right: 0,
-            zIndex: 2,
+            zIndex: zIndexStack.menuBurgerIcon,
             padding: theme.spacing(1),
         },
         menuContainer: {
@@ -16,7 +17,7 @@ export const useMenuStyles = makeStyles((theme) => {
             height: `calc(100vh - ${footerHeight}px)`,
             top: "-100vh",
             left: 0,
-            zIndex: 1,
+            zIndex: zIndexStack.menuContainer,
             transition: "top 0.5s",
             width: "100vw",
             padding: theme.spacing(1),
