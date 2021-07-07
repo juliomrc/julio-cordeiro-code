@@ -10,8 +10,8 @@ export const HomepageDescription = () => (
             <i>portfolio / playground / CV</i> website.
         </SectionParagraph>
         <SectionParagraph>
-            Check out my <Link to={routes.about}>profile</Link> and maybe follow
-            me on{" "}
+            Check out my <Link to={routes.work}>work</Link> and maybe follow me
+            on{" "}
             <Link target="_blank" href={"https://github.com/juliomrc"}>
                 github
             </Link>

@@ -11,13 +11,19 @@ export const useAboutStyles = makeStyles((theme) => {
         stepper: {
             position: "fixed",
             left: 0,
+            height: "300px",
+            top: "calc(50% - 150px)",
             width: stepperWidth,
             borderTopRightRadius: "12px",
             borderBottomRightRadius: "12px",
+            transition: "left 0.3s",
 
             [theme.breakpoints.down("sm")]: {
                 display: "none",
             },
+        },
+        hiddenStepper: {
+            left: -stepperWidth,
         },
         content: {
             textAlign: "justify",
