@@ -1,10 +1,10 @@
 import React from "react";
 import classNames from "classnames";
 import { DragAndDropDraggable } from "../default/DragAndDropDraggable";
-import { useDragAndDropVerticalListStyles } from "./useDragAndDropVerticalList.styles";
-import { DragAndDropVerticalListItemProps } from "./@types/DragAndDropVerticalListTypes";
+import { useDragAndDropVerticalListStyles } from "./useDragAndDropVerticalListStyles";
+import { DragAndDropDraggableProps } from "../default/DragAndDropTypes";
 
-export const DragAndDropVerticalListItem: React.FC<DragAndDropVerticalListItemProps> =
+export const DragAndDropVerticalListItem: React.FC<DragAndDropDraggableProps> =
     ({ children, className, ...restProps }) => {
         const cssClasses = useDragAndDropVerticalListStyles();
 

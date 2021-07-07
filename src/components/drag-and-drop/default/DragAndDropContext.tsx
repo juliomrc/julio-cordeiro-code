@@ -4,7 +4,7 @@ import {
     DropResult,
     ResponderProvided,
 } from "react-beautiful-dnd";
-import { DragAndDropContextProps } from "./@types/DragAndDropTypes";
+import { DragAndDropContextProps } from "./DragAndDropTypes";
 
 export const DragAndDropContext: React.FC<DragAndDropContextProps> = ({
     children,

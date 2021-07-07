@@ -3,7 +3,7 @@ import { Step, StepButton, Stepper } from "@material-ui/core";
 import { AnimationTypes } from "react-component-transition";
 import { AboutSection, aboutSections } from "./about-sections";
 import { StepperContext } from "./StepperContext";
-import { defaultWindowScrollOptions } from "@components/scrollView/defaultWindowScrollOptions";
+import { defaultWindowScrollOptions } from "@components/scroll-view/defaultWindowScrollOptions";
 
 interface AboutSectionStepperProps {
     className?: string;

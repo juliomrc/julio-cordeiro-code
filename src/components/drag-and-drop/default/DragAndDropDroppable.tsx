@@ -1,6 +1,6 @@
 import React from "react";
 import { Droppable } from "react-beautiful-dnd";
-import { DragAndDropDroppableProps } from "./@types/DragAndDropTypes";
+import { DragAndDropDroppableProps } from "./DragAndDropTypes";
 
 export const DragAndDropDroppable: React.FC<DragAndDropDroppableProps> = ({
     children,

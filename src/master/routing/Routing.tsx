@@ -6,7 +6,7 @@ import { AsyncHomepage } from "@modules/homepage/AsyncHomepage";
 import { AsyncContact } from "@modules/contact/AsyncContact";
 import { AsyncNoMatch } from "@modules/no-match/AsyncNoMatch";
 import { LazyRouteWrapper } from "./LazyRouteWrapper";
-import { AnimatedSwitch } from "./animatedSwitch";
+import { AnimatedSwitch } from "./animated-switch";
 import { AsyncWork } from "@modules/work/AsyncWork";
 
 export const Routing: React.FC = () => {

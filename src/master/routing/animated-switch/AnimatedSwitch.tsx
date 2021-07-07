@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Presets } from "react-component-transition";
 import { Switch, useLocation } from "react-router-dom";
 import { useAnimatedSwitchStyles } from "./useAnimatedSwitchStyles";
-import { useScrollWindowToTop } from "@components/scrollView/useScrollWindowToTop";
+import { useScrollWindowToTop } from "@components/scroll-view/use-scroll-window-to-top";
 
 export const AnimatedSwitch: React.FC = ({ children }) => {
     const location = useLocation();

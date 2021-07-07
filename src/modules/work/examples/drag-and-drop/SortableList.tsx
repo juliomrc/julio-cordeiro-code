@@ -3,7 +3,7 @@ import { Typography } from "@components/text/typography";
 import {
     DragAndDropVerticalListContainer,
     DragAndDropVerticalListItem,
-} from "@components/dragAndDrop/dragAndDropVerticalList";
+} from "@components/drag-and-drop/drag-and-drop-vertical-list";
 import { Paper } from "@material-ui/core";
 import { useSortableListStyles } from "./useSortableListStyles";
 

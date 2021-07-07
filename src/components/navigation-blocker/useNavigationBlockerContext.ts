@@ -1,4 +1,4 @@
-import { generateUniqueRandomId } from "@components/generateUniqueRandomId";
+import { generateUniqueRandomId } from "@components/generate-unique-random-id";
 import { useContext, useEffect, useRef } from "react";
 import { NavigationBlockerContext } from "./NavigationBlockerContext";
 

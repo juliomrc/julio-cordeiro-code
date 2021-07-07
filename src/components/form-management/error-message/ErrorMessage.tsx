@@ -1,5 +1,5 @@
 import React from "react";
-import { defaultWindowScrollOptions } from "@components/scrollView/defaultWindowScrollOptions";
+import { defaultWindowScrollOptions } from "@components/scroll-view/defaultWindowScrollOptions";
 import { shakeX } from "@resources/constants/animation-presets";
 import { useErrorMessageStyles } from "./useErrorMessageStyles";
 

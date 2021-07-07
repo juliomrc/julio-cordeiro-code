@@ -1,9 +1,9 @@
 import React from "react";
+import { DragAndDropContextProps } from "../default/DragAndDropTypes";
 import { DragAndDropContext } from "../default/DragAndDropContext";
 import { DragAndDropDroppable } from "../default/DragAndDropDroppable";
-import { DragAndDropVerticalListContainerProps } from "./@types/DragAndDropVerticalListTypes";
 
-export const DragAndDropVerticalListContainer: React.FC<DragAndDropVerticalListContainerProps> =
+export const DragAndDropVerticalListContainer: React.FC<DragAndDropContextProps> =
     ({ children, ...contextProps }) => {
         return (
             <DragAndDropContext {...contextProps}>
