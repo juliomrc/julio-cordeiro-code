@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Presets } from "react-component-transition";
-import { AnimatedPageHeader } from "@components/text/animated-page-header";
 import { HomepageDescription } from "./HomepageDescription";
 import { useCommonStyles } from "@resources/styles/useCommonStyles";
+import { HomepageHeader } from "./homepage-header";
 
 export const Homepage: React.FC = () => {
     const [showDescription, setShowDescription] = useState(false);
@@ -15,15 +15,8 @@ export const Homepage: React.FC = () => {
 
     return (
         <div className={styles.centeredFullContent}>
-            <AnimatedPageHeader
-                onAnimationCompleted={handleTypingIsComplete}
-                strings={[
-                    "Welcome to my website",
-                    "Welcome to my playground",
-                    "Welcome to my CV?",
-                    "Welcome to my CV?.^500.^500.",
-                    "Welcome! :)",
-                ]}
+            <HomepageHeader
+                onAnimationInteractionOrComplete={handleTypingIsComplete}
             />
             <Presets.TransitionFade>
                 {showDescription && <HomepageDescription />}

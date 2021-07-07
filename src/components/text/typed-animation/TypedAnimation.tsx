@@ -1,34 +1,15 @@
-import React, { useRef, useEffect } from "react";
-import Typed, { TypedOptions } from "typed.js";
+import React from "react";
 
-export const TypedAnimation: React.FC<TypedOptions> = (props) => {
-    // Create reference to store the DOM element containing the animation
-    const el = useRef<HTMLSpanElement>(null);
-    // Create reference to store the Typed instance itself
-    const typed = useRef<Typed>();
+interface TypedAnimationProps {
+    domRef: React.RefObject<HTMLSpanElement>;
+}
 
-    useEffect(() => {
-        typed.current = new Typed(el.current as Element, {
-            ...props,
-        });
-
-        return () => {
-            // Make sure to destroy Typed instance during cleanup
-            // to prevent memory leaks
-            typed.current?.destroy();
-        };
-    }, []);
-
+export const TypedAnimation: React.FC<TypedAnimationProps> = ({ domRef }) => {
     return (
         <div className="wrap">
             <div className="type-wrap">
-                <span style={{ whiteSpace: "pre" }} ref={el} />
+                <span style={{ whiteSpace: "pre" }} ref={domRef} />
             </div>
         </div>
     );
-};
-
-TypedAnimation.defaultProps = {
-    typeSpeed: 50,
-    backSpeed: 50,
 };
