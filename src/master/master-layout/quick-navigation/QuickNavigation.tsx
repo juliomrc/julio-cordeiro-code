@@ -9,12 +9,12 @@ const navigationItems = [
         route: routes.homepage,
     },
     {
-        label: "About",
-        route: routes.about,
-    },
-    {
         label: "Work",
         route: routes.work,
+    },
+    {
+        label: "About",
+        route: routes.about,
     },
     {
         label: "Contact",

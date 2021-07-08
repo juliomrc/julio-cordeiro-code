@@ -1,8 +1,9 @@
+import React from "react";
 import { SectionParagraph } from "@components/text/section-paragraph";
 import { Typography } from "@components/text/typography";
-import React from "react";
 import { StepperSection } from "../about-section-stepper";
 import { AboutSection } from "../about-section-stepper";
+import { useExperienceSectionStyles } from "./useExperienceSectionStyles";
 
 interface ExperienceSectionProps {
     stepId: AboutSection;
@@ -17,9 +18,15 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
     description,
     technologies,
 }) => {
+    const styles = useExperienceSectionStyles();
+
     return (
         <>
-            <Typography color="textPrimary" variant="h5">
+            <Typography
+                className={styles.section}
+                color="textPrimary"
+                variant="h5"
+            >
                 <StepperSection stepId={stepId}>{title}</StepperSection>
             </Typography>
             <SectionParagraph>{description}</SectionParagraph>

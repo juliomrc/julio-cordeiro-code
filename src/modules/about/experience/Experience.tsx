@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "@components/inputs/link";
-import { SectionHeader } from "../../../components/text/section-header";
-import { SectionParagraph } from "../../../components/text/section-paragraph";
-import { StepperSection } from "../about-section-stepper";
+import { SectionHeader } from "@components/text/section-header";
+import { SectionParagraph } from "@components/text/section-paragraph";
 import { Typography } from "@components/text/typography";
+import { StepperSection } from "../about-section-stepper";
 import { ExperienceSection } from "./ExperienceSection";
 
 export const Experience: React.FC = () => {

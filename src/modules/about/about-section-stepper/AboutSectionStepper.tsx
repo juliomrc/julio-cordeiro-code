@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Step, StepButton, Stepper } from "@material-ui/core";
-import { AnimationTypes } from "react-component-transition";
 import { AboutSection, aboutSections } from "./about-sections";
 import { StepperContext } from "./StepperContext";
 import { defaultWindowScrollOptions } from "@components/scroll-view/defaultWindowScrollOptions";
+import { shakeX } from "@resources/constants/animation-presets";
 
 interface AboutSectionStepperProps {
     className?: string;
@@ -24,10 +24,7 @@ export const AboutSectionStepper: React.FC<AboutSectionStepperProps> = ({
         const sectionElement = document.getElementById(section);
         sectionElement?.scrollIntoView(defaultWindowScrollOptions);
         if (section !== "Myself") {
-            sectionElement?.animate(
-                AnimationTypes.slideUp.enter.keyframes,
-                AnimationTypes.slideUp.enter.options,
-            );
+            sectionElement?.animate(shakeX.keyframes, shakeX.options);
         }
     };
 
