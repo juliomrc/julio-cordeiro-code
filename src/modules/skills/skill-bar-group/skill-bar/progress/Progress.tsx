@@ -45,15 +45,15 @@ export const Progress: React.FC<ProgressProps> = ({
             <div ref={progressRef} className={styles.progress}>
                 <Presets.TransitionFade>
                     {showHoverProgress && (
-                        <Typography
+                        <div
                             ref={hoverProgressRef}
                             className={classNames(
                                 styles.progress,
                                 styles.hoverProgress,
                             )}
                         >
-                            {hoverProgressLabel}
-                        </Typography>
+                            <Typography>{hoverProgressLabel}</Typography>
+                        </div>
                     )}
                 </Presets.TransitionFade>
             </div>
