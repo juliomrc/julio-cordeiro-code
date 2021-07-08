@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { Pause, PlayArrow, Refresh } from "@material-ui/icons";
 import {
     TypedAnimation,
     useTypedAnimation,
 } from "@components/text/typed-animation";
-import { Button } from "@components/inputs/button";
+import { IconButton } from "@components/inputs/icon-button";
 import { ButtonGroup } from "@material-ui/core";
 import { Presets } from "react-component-transition";
 import { PageHeader } from "@components/text/page-header";
@@ -39,7 +40,7 @@ export const AnimatedHomepageHeader: React.FC<AnimatedHomepageHeaderProps> = ({
     const styles = useAnimatedHomepageHeaderStyles();
 
     return (
-        <div onMouseOver={handleMouseOver}>
+        <div className={styles.container} onMouseOver={handleMouseOver}>
             <PageHeader>
                 <TypedAnimation domRef={domRef} />
             </PageHeader>
@@ -48,24 +49,24 @@ export const AnimatedHomepageHeader: React.FC<AnimatedHomepageHeaderProps> = ({
             >
                 {showButtons && (
                     <ButtonGroup>
-                        <Button
+                        <IconButton
                             onClick={animationHandlers.start}
                             size={"small"}
                         >
-                            Play
-                        </Button>
-                        <Button
+                            <PlayArrow />
+                        </IconButton>
+                        <IconButton
                             onClick={animationHandlers.pause}
                             size={"small"}
                         >
-                            Pause
-                        </Button>
-                        <Button
+                            <Pause />
+                        </IconButton>
+                        <IconButton
                             onClick={animationHandlers.reset}
                             size={"small"}
                         >
-                            Reset
-                        </Button>
+                            <Refresh />
+                        </IconButton>
                     </ButtonGroup>
                 )}
             </Presets.TransitionExpandVertical>
