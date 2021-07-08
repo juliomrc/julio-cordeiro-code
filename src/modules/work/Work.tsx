@@ -12,7 +12,7 @@ export const Work: React.FC = () => {
     const styles = useWorkStyles();
     return (
         <div className={styles.centeredFullContent}>
-            <PageHeader>Work</PageHeader>
+            <PageHeader>Work examples</PageHeader>
             <div className={styles.description}>
                 <SectionParagraph>
                     It is hard to present on a CV all the work I've done,

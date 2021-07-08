@@ -9,7 +9,11 @@ const navigationItems = [
         route: routes.homepage,
     },
     {
-        label: "Work",
+        label: "Skills",
+        route: routes.skills,
+    },
+    {
+        label: "Work examples",
         route: routes.work,
     },
     {
