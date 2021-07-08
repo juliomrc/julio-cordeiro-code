@@ -1,3 +1,4 @@
+import { Typography } from "@components/text/typography";
 import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
 import { Presets } from "react-component-transition";
@@ -44,7 +45,7 @@ export const Progress: React.FC<ProgressProps> = ({
             <div ref={progressRef} className={styles.progress}>
                 <Presets.TransitionFade>
                     {showHoverProgress && (
-                        <div
+                        <Typography
                             ref={hoverProgressRef}
                             className={classNames(
                                 styles.progress,
@@ -52,7 +53,7 @@ export const Progress: React.FC<ProgressProps> = ({
                             )}
                         >
                             {hoverProgressLabel}
-                        </div>
+                        </Typography>
                     )}
                 </Presets.TransitionFade>
             </div>

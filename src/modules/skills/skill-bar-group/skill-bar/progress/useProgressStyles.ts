@@ -5,9 +5,7 @@ import { centeredFullContent } from "@resources/styles/commonStyles";
 export const useProgressStyles = makeStyles((theme) => {
     const borderRadius = "6px";
     const common: CSSProperties = {
-        height: "40px",
-        borderTopRightRadius: borderRadius,
-        borderBottomRightRadius: borderRadius,
+        height: "45px",
     };
     return {
         progressContainer: {
@@ -19,6 +17,8 @@ export const useProgressStyles = makeStyles((theme) => {
         progress: {
             ...common,
             ...centeredFullContent,
+            borderTopRightRadius: borderRadius,
+            borderBottomRightRadius: borderRadius,
             backgroundColor: theme.palette.info.dark,
             position: "absolute",
             top: 0,

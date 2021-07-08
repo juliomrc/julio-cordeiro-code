@@ -16,6 +16,9 @@ export const SkillBar: React.FC<SkillBarProps> = ({
         <div className={styles.skill}>
             <Typography className={styles.name}>{name}</Typography>
             <Progress {...progressProps} />
+            <Typography className={styles.percentage}>
+                {`${progressProps.percentage}%`}
+            </Typography>
         </div>
     );
 };

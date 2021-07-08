@@ -3,38 +3,38 @@ import { SkillDefinition } from "./skill-bar-group";
 export const coreSkills: SkillDefinition[] = [
     {
         name: "React",
-        percentage: 98,
+        percentage: 95,
         hoverProgressLabel: "My library of choice.",
     },
     {
         name: "Typescript",
-        percentage: 95,
+        percentage: 90,
         hoverProgressLabel: "Type safety is life.",
     },
     {
         name: "Webpack",
-        percentage: 90,
+        percentage: 85,
         hoverProgressLabel: "Been through documentation hell and survived.",
     },
     {
         name: "HTML",
-        percentage: 95,
+        percentage: 85,
         hoverProgressLabel: "Nothing to add, just a nice hover.",
     },
     {
         name: "CSS",
-        percentage: 85,
+        percentage: 80,
     },
     {
         name: "Git",
-        percentage: 90,
+        percentage: 85,
     },
 ];
 
 export const otherTechnologies: SkillDefinition[] = [
     {
         name: "Javascript",
-        percentage: 85,
+        percentage: 80,
         hoverProgressLabel: "Not without typescript anymore.",
     },
     {
@@ -50,8 +50,8 @@ export const otherTechnologies: SkillDefinition[] = [
         percentage: 40,
     },
     {
-        name: "Less & Sass",
-        percentage: 80,
+        name: "Less&Sass",
+        percentage: 75,
     },
     {
         name: "Rest",

@@ -11,11 +11,13 @@ export interface SkillDefinition {
 interface SkillsBarGroupProps {
     skills: SkillDefinition[];
     title: string;
+    baseDelay?: number;
 }
 
 export const SkillBarGroup: React.FC<SkillsBarGroupProps> = ({
     skills,
     title,
+    baseDelay,
 }) => {
     const styles = useSkillBarGroupStyles();
     return (
@@ -24,15 +26,15 @@ export const SkillBarGroup: React.FC<SkillsBarGroupProps> = ({
                 {title}
             </Typography>
             {skills.map((skill, index) => {
-                const maximumDuration = skills.length * 300;
-                const delay = index * 150;
-                const duration = maximumDuration - delay;
+                const maximumDuration = skills.length * 150;
+                const relativeDelay = index * 50;
+                const duration = maximumDuration - relativeDelay;
                 return (
                     <SkillBar
                         key={index}
                         name={skill.name}
                         percentage={skill.percentage}
-                        delay={delay}
+                        delay={baseDelay ?? 0 + relativeDelay}
                         duration={duration}
                         hoverProgressLabel={skill.hoverProgressLabel}
                     />
