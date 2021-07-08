@@ -11,8 +11,10 @@ interface SwitchProps extends MaterialUISwitchProps {
 export const Switch: React.FC<SwitchProps> = ({
     onChange,
     onValueChange,
+    checked,
     ...restProps
 }) => {
+    const nonNullishChecked = checked ? checked : false;
     const handleChange = (
         event: React.ChangeEvent<HTMLInputElement>,
         checked: boolean,
@@ -25,5 +27,11 @@ export const Switch: React.FC<SwitchProps> = ({
         }
     };
 
-    return <MaterialUISwitch {...restProps} onChange={handleChange} />;
+    return (
+        <MaterialUISwitch
+            {...restProps}
+            checked={nonNullishChecked}
+            onChange={handleChange}
+        />
+    );
 };
