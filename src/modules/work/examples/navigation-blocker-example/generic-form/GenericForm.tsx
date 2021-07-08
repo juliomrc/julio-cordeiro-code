@@ -8,16 +8,23 @@ import { useGenericFormStyles } from "./useGenericFormStyles";
 import { InputsColumn } from "@components/inputs/inputs-column";
 import { Typography } from "@components/text/typography";
 import { Presets } from "react-component-transition";
+import { SectionParagraph } from "@components/text/section-paragraph";
+import { Link } from "@components/inputs/link";
+import { routes } from "@resources/constants/routes";
 
 export const GenericForm: React.FC = () => {
     const formLogic = useGenericForm();
 
     const styles = useGenericFormStyles();
 
-    console.log("render", formLogic.formState);
-
     return (
         <form className={styles.form} onSubmit={formLogic.handleSubmit}>
+            <SectionParagraph>
+                If this form has unsaved changes, try to navigate out of this
+                page. For the purposes of the demonstration, every form submit
+                will also print in the browser console. Check it out when saving
+                and navigating away!
+            </SectionParagraph>
             <InputsColumn>
                 <TextInput
                     label={"Name"}
@@ -46,15 +53,22 @@ export const GenericForm: React.FC = () => {
                 />
                 <Button type={"submit"}>Submit</Button>
             </InputsColumn>
-            <Typography>Submitted data:</Typography>
+            <SectionParagraph>
+                <Link to={routes.homepage}>
+                    Click here to navigate to the homepage.
+                </Link>
+            </SectionParagraph>
+            <SectionParagraph>Submitted data:</SectionParagraph>
             <Presets.TransitionFade>
                 <React.Fragment
                     key={`${formLogic.submittedData.name}${formLogic.submittedData.surname}${formLogic.submittedData.likesDogs}`}
                 >
                     <Typography>
-                        Name: {`${formLogic.submittedData.name}; `}
-                        Surname: {`${formLogic.submittedData.surname}; `}
-                        Likes dogs: {`${formLogic.submittedData.likesDogs}; `}
+                        Name: {`${formLogic.submittedData.name ?? " - "}; `}
+                        Surname:{" "}
+                        {`${formLogic.submittedData.surname ?? " - "}; `}
+                        Likes dogs:{" "}
+                        {`${formLogic.submittedData.likesDogs ?? " - "}; `}
                     </Typography>
                 </React.Fragment>
             </Presets.TransitionFade>

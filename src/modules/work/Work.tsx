@@ -11,15 +11,19 @@ import { RequestStateHandling } from "./examples/request-state-handling";
 export const Work: React.FC = () => {
     const styles = useWorkStyles();
     return (
-        <div>
+        <div className={styles.centeredFullContent}>
             <PageHeader>Work</PageHeader>
-            <SectionParagraph className={styles.description}>
-                It is hard to present on a CV all the work I've done, especially
-                when said work is done in private repositories. Here I will try
-                to present examples of some of the things I've build before.
-                This whole website is publicly available on Github, so feel free
-                to check out the source code too!
-            </SectionParagraph>
+            <div className={styles.description}>
+                <SectionParagraph>
+                    It is hard to present on a CV all the work I've done,
+                    especially when said work is done in private repositories.
+                </SectionParagraph>
+                <SectionParagraph>
+                    Here I will try to present examples of some of the things
+                    I've build before. This whole website is publicly available
+                    on Github, so feel free to check out the source code too!
+                </SectionParagraph>
+            </div>
             <WorkExample header={"Form management"}>
                 <FormManagement />
             </WorkExample>

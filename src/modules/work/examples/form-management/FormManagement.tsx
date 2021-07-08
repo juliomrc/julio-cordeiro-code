@@ -1,19 +1,13 @@
 import React from "react";
 import { Link } from "@components/inputs/link";
-import { Typography } from "@components/text/typography";
 import { routes } from "@resources/constants/routes";
+import { SectionParagraph } from "@components/text/section-paragraph";
 
 export const FormManagement: React.FC = () => {
     return (
         <>
-            <Typography>
-                Professionally, I worked with the popular{" "}
-                <Link target="_blank" to={"https://formik.org/"}>
-                    Formik
-                </Link>{" "}
-                and a home built solution in Bank Millennium. For my current
-                project, I felt most options available were overcomplicated, so
-                I created something as simple as possible. Check out{" "}
+            <SectionParagraph>
+                First of all, check out{" "}
                 <Link
                     target="_blank"
                     href={
@@ -22,13 +16,27 @@ export const FormManagement: React.FC = () => {
                 >
                     react-simple-form-manager
                 </Link>{" "}
-                on npm.
-            </Typography>
-            <Typography>
-                I've also built a small validator that will grab your attention
-                when you insist on submitting an invalid form. You can check the{" "}
-                <Link to={routes.contact}>contact</Link> form on this website.
-            </Typography>
+                on npm. For my current project, I felt most options available
+                were overcomplicated, so I created something simpler for our
+                needs. The npm documentation should speak for itself.
+            </SectionParagraph>
+            <SectionParagraph>
+                Professionally, I created a lot of different forms. Some of them
+                with the popular{" "}
+                <Link target="_blank" href={"https://formik.org/"}>
+                    Formik
+                </Link>
+                , but most with a home built solution in Bank Millennium. From
+                simple contact forms to multiple pages of investment forms with
+                dynamic sections and validations, I'm prepared to pretty much
+                any type of form.
+            </SectionParagraph>
+            <SectionParagraph>
+                I've also built a small validator in this website that will grab
+                your attention when you insist on submitting an invalid form.
+                You can check the <Link to={routes.contact}>contact</Link> form
+                on this website.
+            </SectionParagraph>
         </>
     );
 };

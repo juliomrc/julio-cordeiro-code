@@ -14,7 +14,7 @@ export const useGenericForm = () => {
     >({});
 
     const handleFormSubmit = (formState: GenericFormState) => {
-        console.log("saved", formState);
+        console.log("Saved form data: ", formState);
         setSubmittedData(formState);
     };
 
