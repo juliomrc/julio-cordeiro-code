@@ -1,14 +1,22 @@
 import React from "react";
 import { PageHeader } from "@components/text/page-header";
 import { useSkillsStyles } from "./useSkillsStyles";
-import { SkillBars } from "./skill-bars";
+import { SkillBarGroup } from "./skill-bar-group";
+import { coreSkills, otherTechnologies } from "./skillsDefinitions";
+import { TwoColumns } from "@components/containers/two-columns";
 
 export const Skills: React.FC = () => {
     const styles = useSkillsStyles();
     return (
         <div className={styles.centeredFullContent}>
             <PageHeader>Skills</PageHeader>
-            <SkillBars />
+            <TwoColumns singleColumnMobile breakpoint="sm">
+                <SkillBarGroup title="Core technologies" skills={coreSkills} />
+                <SkillBarGroup
+                    title="Other technologies"
+                    skills={otherTechnologies}
+                />
+            </TwoColumns>
         </div>
     );
 };

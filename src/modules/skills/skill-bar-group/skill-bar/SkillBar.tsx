@@ -1,14 +1,17 @@
 import React from "react";
-import { useSkillStyles } from "./useSkillStyles";
+import { useSkillBarStyles } from "./useSkillBarStyles";
 import { Progress, ProgressProps } from "./progress";
 import { Typography } from "@components/text/typography";
 
-interface SkillProps extends ProgressProps {
+interface SkillBarProps extends ProgressProps {
     name: string;
 }
 
-export const Skill: React.FC<SkillProps> = ({ name, ...progressProps }) => {
-    const styles = useSkillStyles();
+export const SkillBar: React.FC<SkillBarProps> = ({
+    name,
+    ...progressProps
+}) => {
+    const styles = useSkillBarStyles();
     return (
         <div className={styles.skill}>
             <Typography className={styles.name}>{name}</Typography>

@@ -1,10 +1,10 @@
 import { makeStyles } from "@material-ui/core";
 import { centeredFullContent } from "@resources/styles/commonStyles";
 
-export const useSkillStyles = makeStyles((theme) => ({
+export const useSkillBarStyles = makeStyles((theme) => ({
     skill: {
         display: "flex",
-        width: "500px",
+        width: "100%",
         marginBottom: "20px",
     },
     name: {
