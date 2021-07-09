@@ -8,7 +8,6 @@ export const useTypedAnimation = (options: TypedOptions = {}) => {
 
     useEffect(() => {
         typed.current = new Typed(el.current as Element, options);
-        console.log(typed.current);
         setReRenderCounter(reRenderCounter + 1);
 
         return () => {
