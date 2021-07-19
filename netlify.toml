@@ -1,0 +1,5 @@
+## Copied only in PRD mode by webpack-copy-plugin to the dist folder and used by netlify
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
 const fileName = require("./fileName");
@@ -54,7 +55,13 @@ module.exports = (isDevelopment, isHotDevelopment) => {
             );
         }
     } else {
-        plugins.push(new StylelintPlugin(), new ESLintPlugin());
+        plugins.push(
+            new StylelintPlugin(),
+            new ESLintPlugin(),
+            new CopyPlugin({
+                patterns: [{ from: "netlify.toml", to: `netlify.toml` }],
+            }),
+        );
     }
 
     return plugins;
