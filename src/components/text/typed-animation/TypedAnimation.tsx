@@ -1,15 +1,16 @@
 import React from "react";
+import { useTypedAnimationStyles } from "./useTypedAnimationStyles";
 
 interface TypedAnimationProps {
     domRef: React.RefObject<HTMLSpanElement>;
 }
 
 export const TypedAnimation: React.FC<TypedAnimationProps> = ({ domRef }) => {
+    const styles = useTypedAnimationStyles();
+
     return (
-        <div className="wrap">
-            <div className="type-wrap">
-                <span style={{ whiteSpace: "pre" }} ref={domRef} />
-            </div>
+        <div className={styles.container}>
+            <span ref={domRef} />
         </div>
     );
 };

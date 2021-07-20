@@ -4,6 +4,7 @@ import Hamburger from "hamburger-react";
 import React, { useState } from "react";
 import { BottomNavigation } from "./bottom-navigation";
 import { MenuItems } from "./MenuItems";
+import { QuickNavigation } from "./quick-navigation";
 import { useMenuStyles } from "./useMenuStyles";
 
 export const Menu: React.FC = () => {
@@ -15,8 +16,16 @@ export const Menu: React.FC = () => {
 
     const styles = useMenuStyles();
     return (
-        <header>
-            <div className={styles.burger}>
+        <header className={styles.header}>
+            <div className={styles.quickNavigation}>
+                <QuickNavigation />
+            </div>
+            <div
+                className={classnames(
+                    styles.burger,
+                    !isOpen && styles.burgerOverContentBackground,
+                )}
+            >
                 <Hamburger
                     label="Toggle menu"
                     rounded

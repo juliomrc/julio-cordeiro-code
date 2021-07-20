@@ -3,14 +3,30 @@ import { zIndexStack } from "@resources/styles/zIndexStack";
 
 export const useMenuStyles = makeStyles((theme) => {
     const footerHeight = 56;
+    const burgerSize = 48;
 
     return {
+        header: {
+            padding: theme.spacing(1),
+            width: "100%",
+            minHeight: `${burgerSize}px`,
+        },
+        quickNavigation: {
+            marginRight: `${burgerSize + 2}px`,
+            display: "flex",
+            flexWrap: "wrap",
+        },
         burger: {
             position: "fixed",
-            top: 0,
             right: 0,
+            top: 0,
+            height: `${burgerSize}px`,
             zIndex: zIndexStack.menuBurgerIcon,
-            padding: theme.spacing(1),
+            borderRadius: "6px",
+            transition: "background-color .5s",
+        },
+        burgerOverContentBackground: {
+            backgroundColor: theme.palette.background.default,
         },
         menuContainer: {
             position: "fixed",

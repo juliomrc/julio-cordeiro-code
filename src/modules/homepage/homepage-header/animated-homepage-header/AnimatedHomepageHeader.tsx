@@ -27,7 +27,7 @@ export const AnimatedHomepageHeader: React.FC<AnimatedHomepageHeaderProps> = ({
             "Welcome to my website",
             "Welcome to my playground",
             "Welcome to my CV?",
-            "Welcome to my CV?.^300.^300.",
+            "Welcome to my CV? .^300.^300.",
             "Welcome! :)",
         ],
     });

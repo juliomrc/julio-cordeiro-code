@@ -6,6 +6,7 @@ export const useProgressStyles = makeStyles((theme) => {
     const borderRadius = "6px";
     const common: CSSProperties = {
         height: "45px",
+        minHeight: "100%",
     };
     return {
         progressContainer: {

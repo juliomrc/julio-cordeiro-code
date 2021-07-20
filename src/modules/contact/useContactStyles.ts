@@ -8,7 +8,6 @@ export const useContactStyles = makeStyles((theme) => ({
     },
     formContainer: {
         marginTop: theme.spacing(2),
-        minWidth: "300px",
         maxWidth: "600px",
         width: "100%",
         textAlign: "justify",

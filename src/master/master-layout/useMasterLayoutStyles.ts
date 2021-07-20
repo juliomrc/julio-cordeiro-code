@@ -8,7 +8,9 @@ export const useMasterLayoutStyles = makeStyles((theme) => {
             left: 0,
             width: "100%",
             display: "flex",
+            flexDirection: "column",
             minHeight: "100%",
+            overflowX: "hidden",
         },
         websiteContent: {
             position: "relative",
@@ -17,7 +19,7 @@ export const useMasterLayoutStyles = makeStyles((theme) => {
             marginRight: "auto",
             marginLeft: "auto",
             textAlign: "center",
-            padding: theme.spacing(4),
+            padding: theme.spacing(2),
             maxWidth: "1080px",
             width: "100%",
         },

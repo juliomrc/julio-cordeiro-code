@@ -29,17 +29,17 @@ const navigationItems = [
 export const QuickNavigation: React.FC = () => {
     const styles = useQuickNavigationStyles();
     return (
-        <div className={styles.container}>
+        <>
             {navigationItems.map((item, index) => {
                 return (
-                    <React.Fragment key={index}>
+                    <span className={styles.item} key={index}>
                         <QuickNavigationItem to={item.route}>
                             {item.label}
                         </QuickNavigationItem>
                         {index !== navigationItems.length - 1 && " | "}
-                    </React.Fragment>
+                    </span>
                 );
             })}
-        </div>
+        </>
     );
 };
