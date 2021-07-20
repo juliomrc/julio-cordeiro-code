@@ -5,6 +5,7 @@ export const useSkillBarGroupStyles = makeStyles(() => ({
     barGroup: {
         ...centeredFullContent,
         maxWidth: "450px",
+        width: "100%",
     },
     header: {
         marginBottom: "20px",

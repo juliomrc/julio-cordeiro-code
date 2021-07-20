@@ -16,7 +16,7 @@ export const Skills: React.FC = () => {
                 of building the whole frontend product and glad to take
                 ownership of the development.
             </SectionParagraph>
-            <TwoColumns singleColumnMobile breakpoint="sm">
+            <TwoColumns singleColumnMobile breakpoint="xs">
                 <SkillBarGroup title="Core technologies" skills={coreSkills} />
                 <SkillBarGroup
                     title="Other technologies"

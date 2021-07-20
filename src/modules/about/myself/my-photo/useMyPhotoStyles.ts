@@ -9,7 +9,6 @@ export const useMyPhotoStyles = makeStyles((theme) => ({
         margin: theme.spacing(3),
     },
     photo: {
-        height: "200px",
         borderRadius: "40%",
     },
     description: {

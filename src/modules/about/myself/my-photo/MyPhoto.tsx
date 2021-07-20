@@ -8,7 +8,12 @@ export const MyPhoto: React.FC = () => {
     const styles = useMyPhotoStyles();
     return (
         <div className={styles.container}>
-            <Image src={cvPhoto} className={styles.photo} />
+            <Image
+                height={"200px"}
+                width={"200px"}
+                src={cvPhoto}
+                className={styles.photo}
+            />
             <Typography className={styles.description}>
                 Hey, this is me!
             </Typography>

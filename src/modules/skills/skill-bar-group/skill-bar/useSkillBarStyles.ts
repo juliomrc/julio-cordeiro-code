@@ -14,6 +14,7 @@ export const useSkillBarStyles = makeStyles((theme) => ({
         borderBottomLeftRadius: "6px",
         width: "140px",
         backgroundColor: theme.palette.info.dark,
+        padding: "3px",
     },
     percentage: {
         ...centeredFullContent,
