@@ -32,6 +32,7 @@
         "@types/react-beautiful-dnd": "^13.1.0",
         "@types/react-dom": "^17.0.6",
         "@types/react-router-dom": "^5.1.7",
+        "@types/three": "^0.129.1",
         "@types/webpack-env": "^1.16.0",
         "@typescript-eslint/eslint-plugin": "^4.26.1",
         "@typescript-eslint/parser": "^4.26.1",
@@ -80,6 +81,7 @@
         "react-router-dom": "^5.2.0",
         "react-router-navigation-prompt": "^1.8.14",
         "react-simple-form-manager": "^1.1.1",
+        "three": "^0.129.0",
         "typed.js": "^2.0.12"
     }
 }

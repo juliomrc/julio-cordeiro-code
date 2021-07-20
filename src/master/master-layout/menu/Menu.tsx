@@ -1,11 +1,13 @@
-import { ThemeSwitch } from "@components/theme/ThemeSwitch";
+import React, { useState } from "react";
 import classnames from "classnames";
 import Hamburger from "hamburger-react";
-import React, { useState } from "react";
+
 import { BottomNavigation } from "./bottom-navigation";
-import { MenuItems } from "./MenuItems";
 import { QuickNavigation } from "./quick-navigation";
 import { useMenuStyles } from "./useMenuStyles";
+
+import { ThemeSwitch } from "@components/theme/ThemeSwitch";
+import { LazyThreeJS } from "@modules/three-js/LazyThreeJS";
 
 export const Menu: React.FC = () => {
     const [isOpen, setOpen] = useState(false);
@@ -24,6 +26,7 @@ export const Menu: React.FC = () => {
                 className={classnames(
                     styles.burger,
                     !isOpen && styles.burgerOverContentBackground,
+                    isOpen && styles.contentOverThreeJs,
                 )}
             >
                 <Hamburger
@@ -41,7 +44,7 @@ export const Menu: React.FC = () => {
             >
                 <ThemeSwitch />
                 <div className={styles.menuItems}>
-                    <MenuItems />
+                    <LazyThreeJS shouldMount={isOpen} />
                 </div>
                 <BottomNavigation
                     onChangeNavigation={handleCloseMenu}
