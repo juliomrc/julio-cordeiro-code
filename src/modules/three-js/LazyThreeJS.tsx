@@ -2,7 +2,9 @@ import { CircularLoader } from "@components/loaders/circular-loader";
 import React, { lazy, Suspense, useEffect, useState } from "react";
 
 export const ThreeJS = lazy(() => {
-    return import(/* webpackChunkName: "three-js" */ "./ThreeJS");
+    return import(
+        /* webpackPrefetch: true */ /* webpackChunkName: "three-js" */ "./ThreeJS"
+    );
 });
 
 interface LazyThreeJSProps {
