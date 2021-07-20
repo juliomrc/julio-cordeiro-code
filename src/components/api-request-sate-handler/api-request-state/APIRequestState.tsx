@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import classNames from "classnames";
+import { Presets } from "react-component-transition";
+import { Alert } from "@components/alert";
 import { useAPIRequestStateStyles } from "./useAPIRequestStateStyles";
 import { APIRequestStateProps } from "./APIRequestStateTypes";
 import { useDelayShowingRequestState } from "./useDelayShowingRequestState";
-import { Presets } from "react-component-transition";
-import { CircularProgress } from "@material-ui/core";
-import { Alert } from "@components/alert";
-// TODO import
-import { APIRequestStateAndHandler } from "../use-api-request-state-handler/UseAPIRequestStateHandlerTypes";
+import { APIRequestStateAndHandler } from "../use-api-request-state-handler";
+import { CircularLoader } from "@components/loaders/circular-loader";
 
 export const APIRequestState: React.FC<APIRequestStateProps> = ({
     requestState = {} as APIRequestStateAndHandler,
@@ -45,7 +44,7 @@ export const APIRequestState: React.FC<APIRequestStateProps> = ({
                                     ))}
                                 </Alert>
                             )}
-                            {isLoading && <CircularProgress />}
+                            {isLoading && <CircularLoader />}
                         </>
                     </div>
                 </div>
