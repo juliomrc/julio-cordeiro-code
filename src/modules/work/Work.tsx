@@ -11,7 +11,7 @@ import { RequestStateHandling } from "./examples/request-state-handling";
 export const Work: React.FC = () => {
     const styles = useWorkStyles();
     return (
-        <div className={styles.centeredFullContent}>
+        <div className={styles.fullContent}>
             <PageHeader>Work examples</PageHeader>
             <div className={styles.description}>
                 <SectionParagraph>

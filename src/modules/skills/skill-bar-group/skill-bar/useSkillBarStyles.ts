@@ -22,7 +22,6 @@ export const useSkillBarStyles = makeStyles((theme) => ({
         padding: "4px",
         borderTopRightRadius: "6px",
         borderBottomRightRadius: "6px",
-        // width: "20px",
         backgroundColor: theme.palette.background.paper,
     },
 }));

@@ -2,7 +2,7 @@ import React from "react";
 import { Image } from "@components/image";
 import { Typography } from "@components/text/typography";
 import { useMyPhotoStyles } from "./useMyPhotoStyles";
-import cvPhoto from "./CV_Photo.png";
+import cvPhoto from "./CV_Photo_200.png";
 
 export const MyPhoto: React.FC = () => {
     const styles = useMyPhotoStyles();

@@ -1,7 +1,8 @@
-import { Typography } from "@components/text/typography";
-import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
+import classNames from "classnames";
 import { Presets } from "react-component-transition";
+import { Typography } from "@components/text/typography";
+import { useIsViewPortSmallerThan } from "@components/theme/useIsViewPortSmallerThan";
 import { getFillAnimation } from "./animationHelpers";
 import { useProgressStyles } from "./useProgressStyles";
 
@@ -20,6 +21,7 @@ export const Progress: React.FC<ProgressProps> = ({
 }) => {
     const [showHoverProgress, setShowHoverProgress] = useState(false);
     const styles = useProgressStyles();
+    const isSmallDevice = useIsViewPortSmallerThan("md");
 
     const handleMouseEnter = () => {
         setShowHoverProgress(true);
@@ -44,7 +46,7 @@ export const Progress: React.FC<ProgressProps> = ({
         >
             <div ref={progressRef} className={styles.progress}>
                 <Presets.TransitionFade>
-                    {showHoverProgress && (
+                    {!isSmallDevice && showHoverProgress && (
                         <div
                             ref={hoverProgressRef}
                             className={classNames(

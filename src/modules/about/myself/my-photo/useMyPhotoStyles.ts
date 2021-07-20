@@ -9,7 +9,7 @@ export const useMyPhotoStyles = makeStyles((theme) => ({
         margin: theme.spacing(3),
     },
     photo: {
-        borderRadius: "40%",
+        borderRadius: "50%",
     },
     description: {
         textAlign: "center",
