@@ -50,7 +50,9 @@ export const useMenuStyles = makeStyles((theme) => {
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
-            height: "100%",
+            padding: theme.spacing(2),
+            overflowY: "auto",
+            height: `calc(100vh - ${footerHeight + burgerSize}px)`,
         },
         bottomNavigation: {
             position: "fixed",
