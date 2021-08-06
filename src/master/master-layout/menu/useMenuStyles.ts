@@ -28,9 +28,6 @@ export const useMenuStyles = makeStyles((theme) => {
         burgerOverContentBackground: {
             backgroundColor: theme.palette.background.default,
         },
-        contentOverThreeJs: {
-            color: "white",
-        },
         menuContainer: {
             position: "fixed",
             height: `calc(100vh - ${footerHeight}px)`,

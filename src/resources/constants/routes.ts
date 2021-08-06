@@ -4,4 +4,5 @@ export const routes = {
     about: "/about",
     contact: "/contact",
     skills: "/skills",
+    threeJS: "/three-js",
 };

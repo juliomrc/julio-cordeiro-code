@@ -3,7 +3,7 @@ import { centeredFullContent } from "@resources/styles/commonStyles";
 
 export const useThreeJSStyles = makeStyles((theme) => ({
     canvas: {
-        position: "absolute",
+        position: "fixed",
         top: 0,
         left: 0,
     },

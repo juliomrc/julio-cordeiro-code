@@ -12,7 +12,7 @@ export const QuickNavigationItem: React.FC<QuickNavigationItemProps> = ({
 }) => {
     const styles = useQuickNavigationStyles();
     return (
-        <Link color={"textPrimary"} className={styles.itemText} to={to}>
+        <Link color={"inherit"} className={styles.itemText} to={to}>
             {children}
         </Link>
     );

@@ -8,5 +8,8 @@ export const useQuickNavigationStyles = makeStyles((theme) => {
         itemText: {
             padding: theme.spacing(1),
         },
+        contentOverThreeJs: {
+            color: "white",
+        },
     };
 });

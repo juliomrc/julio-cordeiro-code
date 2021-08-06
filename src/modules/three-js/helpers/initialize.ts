@@ -3,7 +3,7 @@ import { buildObjects } from "./buildObjects";
 import { positionElements } from "./positionElements";
 import { animateElements } from "./animateItems";
 
-export const initialize = async () => {
+export const initializeThreeJS = async () => {
     const { camera, scene, renderer } = buildSceneCameraAndRenderer();
     const { particles, bluePointLight, redPointLight, sphere } =
         await buildObjects();
@@ -12,10 +12,4 @@ export const initialize = async () => {
     scene.add(sphere, bluePointLight, redPointLight, ...particles);
 
     animateElements(sphere, particles, scene, camera, renderer);
-
-    const handleUnmount = () => {
-        document.body.removeChild(renderer.domElement);
-    };
-
-    return { handleUnmount };
 };

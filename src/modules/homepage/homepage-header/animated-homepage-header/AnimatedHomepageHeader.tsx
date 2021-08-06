@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Pause, PlayArrow, Refresh } from "@material-ui/icons";
+import { Presets } from "react-component-transition";
 import {
     TypedAnimation,
     useTypedAnimation,
 } from "@components/text/typed-animation";
 import { IconButton } from "@components/inputs/icon-button";
-import { ButtonGroup } from "@material-ui/core";
-import { Presets } from "react-component-transition";
 import { PageHeader } from "@components/text/page-header";
 import { useAnimatedHomepageHeaderStyles } from "./useAnimatedHomepageHeaderStyles";
 
@@ -48,7 +47,7 @@ export const AnimatedHomepageHeader: React.FC<AnimatedHomepageHeaderProps> = ({
                 className={styles.buttonContainer}
             >
                 {showButtons && (
-                    <ButtonGroup>
+                    <>
                         <IconButton
                             onClick={animationHandlers.start}
                             size={"small"}
@@ -67,7 +66,7 @@ export const AnimatedHomepageHeader: React.FC<AnimatedHomepageHeaderProps> = ({
                         >
                             <Refresh />
                         </IconButton>
-                    </ButtonGroup>
+                    </>
                 )}
             </Presets.TransitionExpandVertical>
         </div>

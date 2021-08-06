@@ -1,7 +1,7 @@
 import classnames from "classnames";
 import React, { useEffect } from "react";
 import { threeJsCanvasId } from "./helpers/buildSceneCameraAndRenderer";
-import { initialize } from "./helpers/initialize";
+import { initializeThreeJS } from "./helpers/initialize";
 import { useThreeJSStyles } from "./useThreeJSStyles";
 
 interface ThreeJSCanvasAnimationProps {
@@ -12,20 +12,7 @@ export const ThreeJSCanvasAnimation: React.FC<ThreeJSCanvasAnimationProps> = ({
     isThreeJSAbove,
 }) => {
     useEffect(() => {
-        let onUnmount: () => void;
-
-        const initializeThreeJs = async () => {
-            const { handleUnmount } = await initialize();
-            onUnmount = handleUnmount;
-        };
-
-        initializeThreeJs();
-
-        return () => {
-            if (onUnmount) {
-                onUnmount();
-            }
-        };
+        initializeThreeJS();
     }, []);
 
     const styles = useThreeJSStyles();

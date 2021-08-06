@@ -1,45 +1,29 @@
-import { routes } from "@resources/constants/routes";
 import React from "react";
+import classNames from "classnames";
+import { useLocation } from "react-router-dom";
+import { routes } from "@resources/constants/routes";
 import { QuickNavigationItem } from "./QuickNavigationItem";
+import { quickNavigationItemsList } from "./QuickNavigationItemsList";
 import { useQuickNavigationStyles } from "./useQuickNavigationStyles";
-
-const navigationItems = [
-    {
-        label: "Homepage",
-        route: routes.homepage,
-    },
-    {
-        label: "Skills",
-        route: routes.skills,
-    },
-    {
-        label: "Work examples",
-        route: routes.work,
-    },
-    {
-        label: "About",
-        route: routes.about,
-    },
-    {
-        label: "Contact",
-        route: routes.contact,
-    },
-];
 
 export const QuickNavigation: React.FC = () => {
     const styles = useQuickNavigationStyles();
+
+    const location = useLocation();
+    const isThreeJSPage = location.pathname === routes.threeJS;
+
     return (
-        <>
-            {navigationItems.map((item, index) => {
+        <div className={classNames(isThreeJSPage && styles.contentOverThreeJs)}>
+            {quickNavigationItemsList.map((item, index) => {
                 return (
                     <span className={styles.item} key={index}>
                         <QuickNavigationItem to={item.route}>
                             {item.label}
                         </QuickNavigationItem>
-                        {index !== navigationItems.length - 1 && " | "}
+                        {index !== quickNavigationItemsList.length - 1 && " | "}
                     </span>
                 );
             })}
-        </>
+        </div>
     );
 };

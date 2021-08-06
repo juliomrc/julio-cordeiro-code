@@ -10,6 +10,7 @@ import { AsyncContact } from "@modules/contact/AsyncContact";
 import { AsyncNoMatch } from "@modules/no-match/AsyncNoMatch";
 import { AsyncWork } from "@modules/work/AsyncWork";
 import { AsyncSkills } from "@modules/skills/AsyncSkills";
+import { AsyncThreeJS } from "@modules/three-js/AsyncThreeJs";
 
 export const Routing: React.FC = () => {
     return (
@@ -20,6 +21,7 @@ export const Routing: React.FC = () => {
                 <Route exact path={routes.about} component={AsyncAbout} />
                 <Route exact path={routes.contact} component={AsyncContact} />
                 <Route exact path={routes.skills} component={AsyncSkills} />
+                <Route exact path={routes.threeJS} component={AsyncThreeJS} />
                 <Route component={AsyncNoMatch} />
             </AnimatedSwitch>
         </LazyRouteWrapper>
