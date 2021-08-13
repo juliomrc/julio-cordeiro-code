@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Step, StepButton, Stepper } from "@material-ui/core";
 import { AboutSection, aboutSections } from "./about-sections";
 import { StepperContext } from "./StepperContext";
-import { shakeX } from "@resources/constants/animation-presets";
+import { shakeX } from "@resources/constants/animationPresets";
 
 interface AboutSectionStepperProps {
     className?: string;

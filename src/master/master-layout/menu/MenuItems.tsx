@@ -8,8 +8,14 @@ interface MenuItemsProps {
 
 export const MenuItems: React.FC<MenuItemsProps> = ({ onItemClick }) => {
     return (
-        <Link color={"inherit"} onClick={onItemClick} to={routes.threeJS}>
-            Three JS
-        </Link>
+        <>
+            <Link color={"inherit"} onClick={onItemClick} to={routes.threeJS}>
+                Three JS
+            </Link>
+
+            <Link color={"inherit"} onClick={onItemClick} to={routes.recoil}>
+                Recoil
+            </Link>
+        </>
     );
 };

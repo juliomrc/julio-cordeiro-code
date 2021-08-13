@@ -19,3 +19,18 @@ export const shakeX: WebAnimationAPIType = {
     ],
     options: { duration: 500, fill: "both" },
 };
+
+export const highlight: WebAnimationAPIType = {
+    keyframes: [
+        {
+            backgroundColor: "transparent",
+        },
+        {
+            backgroundColor: "yellow",
+        },
+        {
+            backgroundColor: "transparent",
+        },
+    ],
+    options: { duration: 500, fill: "both" },
+};

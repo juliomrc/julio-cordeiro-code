@@ -5,4 +5,5 @@ export const routes = {
     contact: "/contact",
     skills: "/skills",
     threeJS: "/three-js",
+    recoil: "/recoil",
 };

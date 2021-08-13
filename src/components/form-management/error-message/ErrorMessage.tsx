@@ -1,6 +1,6 @@
 import React from "react";
 import { defaultWindowScrollOptions } from "@components/scroll-view/defaultWindowScrollOptions";
-import { shakeX } from "@resources/constants/animation-presets";
+import { shakeX } from "@resources/constants/animationPresets";
 import { useErrorMessageStyles } from "./useErrorMessageStyles";
 
 const errorMessageId = "error-message";
