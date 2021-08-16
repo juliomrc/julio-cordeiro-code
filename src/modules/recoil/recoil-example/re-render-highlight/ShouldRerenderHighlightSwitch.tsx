@@ -9,16 +9,18 @@ export const ShouldRerenderHighlightSwitch: React.FC = () => {
         useRecoilState(shouldHighlightAtom);
 
     return (
-        <FormControlLabel
-            control={
-                <Switch
-                    checked={shouldHightLight}
-                    onValueChange={() => {
-                        setShouldHighlight(!shouldHightLight);
-                    }}
-                />
-            }
-            label="Highlight re-renders"
-        />
+        <div>
+            <FormControlLabel
+                control={
+                    <Switch
+                        checked={shouldHightLight}
+                        onValueChange={() => {
+                            setShouldHighlight(!shouldHightLight);
+                        }}
+                    />
+                }
+                label="Highlight re-renders"
+            />
+        </div>
     );
 };
