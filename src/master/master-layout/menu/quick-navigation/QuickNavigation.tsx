@@ -6,14 +6,25 @@ import { QuickNavigationItem } from "./QuickNavigationItem";
 import { quickNavigationItemsList } from "./QuickNavigationItemsList";
 import { useQuickNavigationStyles } from "./useQuickNavigationStyles";
 
-export const QuickNavigation: React.FC = () => {
+interface QuickNavigationProps {
+    className: string;
+}
+
+export const QuickNavigation: React.FC<QuickNavigationProps> = ({
+    className,
+}) => {
     const styles = useQuickNavigationStyles();
 
     const location = useLocation();
     const isThreeJSPage = location.pathname === routes.threeJS;
 
     return (
-        <div className={classNames(isThreeJSPage && styles.contentOverThreeJs)}>
+        <div
+            className={classNames(
+                className,
+                isThreeJSPage && styles.contentOverThreeJs,
+            )}
+        >
             {quickNavigationItemsList.map((item, index) => {
                 return (
                     <span className={styles.item} key={index}>

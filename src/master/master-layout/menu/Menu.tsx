@@ -18,9 +18,7 @@ export const Menu: React.FC = () => {
     const styles = useMenuStyles();
     return (
         <header className={styles.header}>
-            <div className={styles.quickNavigation}>
-                <QuickNavigation />
-            </div>
+            <QuickNavigation className={styles.quickNavigation} />
             <div
                 className={classnames(
                     styles.burger,
