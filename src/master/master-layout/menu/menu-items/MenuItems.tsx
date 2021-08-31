@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "@components/inputs/link";
 import { routes } from "@resources/constants/routes";
+import { MenuItem } from "./MenuItem";
 
 interface MenuItemsProps {
     onItemClick: () => void;
@@ -9,13 +9,12 @@ interface MenuItemsProps {
 export const MenuItems: React.FC<MenuItemsProps> = ({ onItemClick }) => {
     return (
         <>
-            <Link color={"inherit"} onClick={onItemClick} to={routes.threeJS}>
+            <MenuItem onClick={onItemClick} to={routes.threeJS}>
                 Three JS
-            </Link>
-
-            <Link color={"inherit"} onClick={onItemClick} to={routes.recoil}>
+            </MenuItem>
+            <MenuItem onClick={onItemClick} to={routes.recoil}>
                 Recoil
-            </Link>
+            </MenuItem>
         </>
     );
 };

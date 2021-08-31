@@ -6,7 +6,7 @@ import { ThemeSwitch } from "@components/theme/ThemeSwitch";
 import { BottomNavigation } from "./bottom-navigation";
 import { QuickNavigation } from "./quick-navigation";
 import { useMenuStyles } from "./useMenuStyles";
-import { MenuItems } from "./MenuItems";
+import { MenuItems } from "./menu-items";
 
 export const Menu: React.FC = () => {
     const [isOpen, setOpen] = useState(false);
