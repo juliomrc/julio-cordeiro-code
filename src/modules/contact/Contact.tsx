@@ -30,6 +30,10 @@ export const Contact: React.FC = () => {
                         Send me an email and I will get back to you as soon as
                         possible. You can also reach out on <LinkedinLink />.
                     </SectionParagraph>
+                    <SectionParagraph>
+                        P.S: The BE is not implemented yet, so <LinkedinLink />{" "}
+                        is definitely the best option.
+                    </SectionParagraph>
                     <TextInput
                         className={styles.firstInput}
                         label={"Email"}
