@@ -12,6 +12,7 @@ import { AsyncWork } from "@modules/work/AsyncWork";
 import { AsyncSkills } from "@modules/skills/AsyncSkills";
 import { AsyncThreeJS } from "@modules/three-js/AsyncThreeJs";
 import { AsyncRecoil } from "@modules/recoil/AsyncRecoil";
+import { AsyncJavascriptExercises } from "@modules/javascript-exercises/AsyncJavascriptExercises";
 
 export const Routing: React.FC = () => {
     return (
@@ -24,6 +25,11 @@ export const Routing: React.FC = () => {
                 <Route exact path={routes.skills} component={AsyncSkills} />
                 <Route exact path={routes.threeJS} component={AsyncThreeJS} />
                 <Route exact path={routes.recoil} component={AsyncRecoil} />
+                <Route
+                    exact
+                    path={routes.javascriptExercises}
+                    component={AsyncJavascriptExercises}
+                />
                 <Route component={AsyncNoMatch} />
             </AnimatedSwitch>
         </LazyRouteWrapper>
