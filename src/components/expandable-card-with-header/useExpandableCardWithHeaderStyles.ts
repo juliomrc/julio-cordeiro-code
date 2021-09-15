@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
-export const useWorkExampleStyles = makeStyles(() => {
+export const useExpandableCardWithHeaderStyles = makeStyles(() => {
     return {
         paper: {
             padding: "10px 15px",
@@ -16,7 +16,7 @@ export const useWorkExampleStyles = makeStyles(() => {
         content: {
             textAlign: "left",
         },
-        exampleTitle: {
+        title: {
             textDecoration: "underline",
             marginRight: "20px",
         },

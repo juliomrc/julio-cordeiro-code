@@ -2,7 +2,7 @@ import React from "react";
 import { PageHeader } from "@components/text/page-header";
 import { SectionParagraph } from "@components/text/section-paragraph";
 import { useWorkStyles } from "./useWorkStyles";
-import { WorkExample } from "./work-example";
+import { ExpandableCardWithHeader } from "../../components/expandable-card-with-header";
 import { FormManagement } from "./examples/form-management";
 import { NavigationBlockerExample } from "./examples/navigation-blocker-example";
 import { DragAndDrop } from "./examples/drag-and-drop";
@@ -24,18 +24,18 @@ export const Work: React.FC = () => {
                     on Github, so feel free to check out the source code too!
                 </SectionParagraph>
             </div>
-            <WorkExample header={"Form management"}>
+            <ExpandableCardWithHeader header={"Form management"}>
                 <FormManagement />
-            </WorkExample>
-            <WorkExample header={"Navigation blocker"}>
+            </ExpandableCardWithHeader>
+            <ExpandableCardWithHeader header={"Navigation blocker"}>
                 <NavigationBlockerExample />
-            </WorkExample>
-            <WorkExample header={"Drag and drop"}>
+            </ExpandableCardWithHeader>
+            <ExpandableCardWithHeader header={"Drag and drop"}>
                 <DragAndDrop />
-            </WorkExample>
-            <WorkExample header={"Request state handling"}>
+            </ExpandableCardWithHeader>
+            <ExpandableCardWithHeader header={"Request state handling"}>
                 <RequestStateHandling />
-            </WorkExample>
+            </ExpandableCardWithHeader>
         </div>
     );
 };
