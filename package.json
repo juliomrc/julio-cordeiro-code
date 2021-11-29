@@ -5,6 +5,7 @@
     "private": true,
     "license": "ISC",
     "scripts": {
+        "test": "jest",
         "prepare": "husky install",
         "start-dev": "webpack serve --hot --env dev",
         "clean-dist": "rimraf dist",
