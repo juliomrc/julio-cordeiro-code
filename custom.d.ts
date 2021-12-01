@@ -17,3 +17,8 @@ declare module "*.pdf" {
     const imageSrc: string;
     export default imageSrc;
 }
+
+declare module "*?raw" {
+    const rawFile: string;
+    export default rawFile;
+}

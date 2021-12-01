@@ -1,9 +1,19 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const noLoadersForRawImportsResourceQuery = {
+    resourceQuery: { not: [/raw/] },
+};
+
+const rawImports = {
+    resourceQuery: /raw/,
+    type: "asset/source",
+};
+
 const getJsTsLoaders = (isHotDevelopment) => {
     return {
         test: /\.(js|ts(x?))$/,
+        ...noLoadersForRawImportsResourceQuery,
         exclude: /node_modules/,
         use: {
             loader: "babel-loader",
@@ -18,6 +28,7 @@ const getJsTsLoaders = (isHotDevelopment) => {
 
 const styleLoaders = {
     test: /\.(scss|sass|css)$/,
+    ...noLoadersForRawImportsResourceQuery,
     exclude: /node_modules/,
     use: [
         MiniCssExtractPlugin.loader,
@@ -47,6 +58,7 @@ const assetLoaders = {
 
 const svgLoaders = {
     test: /\.svg$/,
+    ...noLoadersForRawImportsResourceQuery,
     use: [
         {
             loader: "@svgr/webpack",
@@ -73,6 +85,9 @@ const getModuleLoaders = (isHotDevelopment) => {
         },
         {
             ...assetLoaders,
+        },
+        {
+            ...rawImports,
         },
     ];
 };
