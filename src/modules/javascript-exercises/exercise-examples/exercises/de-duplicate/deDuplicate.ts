@@ -1,3 +1,5 @@
+// Given an array of strings, remove all the duplicated strings
+
 export function deDuplicate(phrase: string): string {
     const words = phrase.split(" ");
     const uniqueWords: Record<string, boolean> = {};
