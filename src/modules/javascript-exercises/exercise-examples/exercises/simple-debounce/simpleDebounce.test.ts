@@ -2,7 +2,7 @@ import { simpleDebounce } from "./simpleDebounce";
 
 jest.useFakeTimers();
 
-describe("Debounce", () => {
+describe("Simple debounce", () => {
     it("Calls function after timeout", () => {
         const mock = jest.fn();
         const debouncedFn = simpleDebounce(mock, 1000);

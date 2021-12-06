@@ -10,6 +10,7 @@ import { NumberOfChangedValuesRequiredToSortExercise } from "./exercises/number-
 import { PromisifyExercise } from "./exercises/promisify";
 import { ReverseStringExercise } from "./exercises/reverse-string";
 import { SharedEntriesExercise } from "./exercises/shared-entries";
+import { SimpleDebounceExercise } from "./exercises/simple-debounce";
 
 export const ExerciseExamples: React.FC = () => {
     return (
@@ -20,6 +21,7 @@ export const ExerciseExamples: React.FC = () => {
             <FlattenArrayExercise />
             <PromisifyExercise />
             <MaxWoodLengthExercise />
+            <SimpleDebounceExercise />
             <SharedEntriesExercise />
             <AtMostOneDigitSwapExercise />
             <NumberOfChangedValuesRequiredToSortExercise />
