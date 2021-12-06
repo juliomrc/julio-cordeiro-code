@@ -16,11 +16,13 @@ import { SortMatrixByNumberOfRepetitionsAndByValueExercise } from "./exercises/s
 import { TraverseMatrixSpiralExercise } from "./exercises/traverse-matrix/traverse-matrix-spiral";
 import { ZigZagTraverseMatrixDiagonallyExercise } from "./exercises/traverse-matrix/zig-zag-traverse-matrix-diagonally";
 import { GenericTraverseMatrixDiagonallyExercise } from "./exercises/traverse-matrix/traverse-matrix-diagonally";
+import { FindTheRabbitExercise } from "./exercises/find-the-rabbit";
 
 export const ExerciseExamples: React.FC = () => {
     return (
         <>
             <CustomBindExercise />
+            <FindTheRabbitExercise />
             <GetByPathExercise />
             <InvertBinaryTreeExercise />
             <FlattenArrayExercise />
