@@ -5,7 +5,7 @@
 // For the sake of not overdoing it, i'll implement one direction for each corner,
 // starting from rows and then columns
 
-import { getLoopStartingPositions } from "./getStartingPositions";
+import { getLoopStartingPositions } from "./getLoopStartingPositions";
 import { traverseDiagonal } from "./traverseDiagonal";
 
 type VerticalDirection = "up" | "down";

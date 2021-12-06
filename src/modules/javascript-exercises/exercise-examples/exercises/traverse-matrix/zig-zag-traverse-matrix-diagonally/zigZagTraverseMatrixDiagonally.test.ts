@@ -1,6 +1,6 @@
 import { zigZagTraverseArrayDiagonally } from "./zigZagTraverseMatrixDiagonally";
 
-it("zigZagTraverseArrayDiagonally", () => {
+it("Traverse a matrix diagonally and in zig zag", () => {
     expect(zigZagTraverseArrayDiagonally([])).toEqual([]);
     expect(
         zigZagTraverseArrayDiagonally([

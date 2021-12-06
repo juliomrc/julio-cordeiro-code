@@ -13,6 +13,9 @@ import { SharedEntriesExercise } from "./exercises/shared-entries";
 import { SimpleDebounceExercise } from "./exercises/simple-debounce";
 import { SleepExercise } from "./exercises/sleep";
 import { SortMatrixByNumberOfRepetitionsAndByValueExercise } from "./exercises/sort-matrix-by-number-of-repetitions-and-by-value";
+import { TraverseMatrixSpiralExercise } from "./exercises/traverse-matrix/traverse-matrix-spiral";
+import { ZigZagTraverseMatrixDiagonallyExercise } from "./exercises/traverse-matrix/zig-zag-traverse-matrix-diagonally";
+import { GenericTraverseMatrixDiagonallyExercise } from "./exercises/traverse-matrix/traverse-matrix-diagonally";
 
 export const ExerciseExamples: React.FC = () => {
     return (
@@ -23,6 +26,9 @@ export const ExerciseExamples: React.FC = () => {
             <FlattenArrayExercise />
             <PromisifyExercise />
             <MaxWoodLengthExercise />
+            <TraverseMatrixSpiralExercise />
+            <ZigZagTraverseMatrixDiagonallyExercise />
+            <GenericTraverseMatrixDiagonallyExercise />
             <SortMatrixByNumberOfRepetitionsAndByValueExercise />
             <SimpleDebounceExercise />
             <SharedEntriesExercise />

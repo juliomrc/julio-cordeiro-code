@@ -1,6 +1,6 @@
 import { genericTraverseMatrixDiagonally } from "./genericTraverseMatrixDiagonally";
 
-describe("genericTraverseMatrixDiagonally", () => {
+describe("Generic Traverse Matrix Diagonally", () => {
     it("Does not break with empty matrix", () => {
         expect(genericTraverseMatrixDiagonally([])).toEqual([]);
     });
