@@ -12,6 +12,7 @@ import { ReverseStringExercise } from "./exercises/reverse-string";
 import { SharedEntriesExercise } from "./exercises/shared-entries";
 import { SimpleDebounceExercise } from "./exercises/simple-debounce";
 import { SleepExercise } from "./exercises/sleep";
+import { SortMatrixByNumberOfRepetitionsAndByValueExercise } from "./exercises/sort-matrix-by-number-of-repetitions-and-by-value";
 
 export const ExerciseExamples: React.FC = () => {
     return (
@@ -22,6 +23,7 @@ export const ExerciseExamples: React.FC = () => {
             <FlattenArrayExercise />
             <PromisifyExercise />
             <MaxWoodLengthExercise />
+            <SortMatrixByNumberOfRepetitionsAndByValueExercise />
             <SimpleDebounceExercise />
             <SharedEntriesExercise />
             <SleepExercise />
