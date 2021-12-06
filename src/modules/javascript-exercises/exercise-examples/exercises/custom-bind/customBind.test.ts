@@ -3,7 +3,7 @@ import { customBind, customCall } from "./customBind";
 jest.spyOn(Function.prototype, "bind").mockImplementation(customBind);
 jest.spyOn(Function.prototype, "call").mockImplementation(customCall);
 
-describe("Custom bind implementation", () => {
+describe("Custom .bind and .call implementation", () => {
     it("Binds this", () => {
         function sayHello(this: { name: string }) {
             return `Hello ${this.name}`;
