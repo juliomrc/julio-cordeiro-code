@@ -14,7 +14,14 @@ export const CodeSyntaxHighlighter: React.FC<CodeSyntaxHighlighterProps> = ({
 }) => {
     const theme = useGetCodeSyntaxHighlighterTheme();
     return (
-        <PrismAsyncLight style={theme} showLineNumbers={true} language="tsx">
+        <PrismAsyncLight
+            style={theme}
+            language="tsx"
+            lineProps={{
+                style: { wordBreak: "break-all", whiteSpace: "pre-wrap" },
+            }}
+            wrapLongLines
+        >
             {children}
         </PrismAsyncLight>
     );
