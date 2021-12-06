@@ -1,6 +1,6 @@
 import { sharedEntries } from "./sharedEntries";
 
-describe("sharedEntries", () => {
+describe("Shared Entries", () => {
     function* generator(list: Array<unknown>) {
         yield* list;
     }
@@ -52,7 +52,7 @@ describe("sharedEntries", () => {
         expect(result).toStrictEqual([1, 1, 2, 2]);
     });
 
-    it("order does not matter", () => {
+    it("Order does not matter", () => {
         const i1 = generator([1, 1, 2, 2, 2]);
         const i2 = generator([1, 1, 2, 2, 3, 4, 5]);
 
@@ -65,7 +65,7 @@ describe("sharedEntries", () => {
         expect(result).toStrictEqual(resultInverse);
     });
 
-    it("does not fail with empty arrays", () => {
+    it("Does not fail with empty arrays", () => {
         const i1 = generator([]);
         const i2 = generator([]);
 
@@ -74,7 +74,7 @@ describe("sharedEntries", () => {
         expect(result).toStrictEqual([]);
     });
 
-    it("works with null and undefined", () => {
+    it("Works with null and undefined", () => {
         const i1 = generator([1, 2, 3, null, undefined]);
         const i2 = generator([3, null, undefined]);
 

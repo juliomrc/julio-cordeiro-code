@@ -9,6 +9,7 @@ import { MaxWoodLengthExercise } from "./exercises/max-wood-length";
 import { NumberOfChangedValuesRequiredToSortExercise } from "./exercises/number-of-changes-required-to-sort";
 import { PromisifyExercise } from "./exercises/promisify";
 import { ReverseStringExercise } from "./exercises/reverse-string";
+import { SharedEntriesExercise } from "./exercises/shared-entries";
 
 export const ExerciseExamples: React.FC = () => {
     return (
@@ -19,6 +20,7 @@ export const ExerciseExamples: React.FC = () => {
             <FlattenArrayExercise />
             <PromisifyExercise />
             <MaxWoodLengthExercise />
+            <SharedEntriesExercise />
             <AtMostOneDigitSwapExercise />
             <NumberOfChangedValuesRequiredToSortExercise />
             <DeDuplicateExercise />
