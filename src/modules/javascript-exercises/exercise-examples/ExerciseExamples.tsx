@@ -16,6 +16,7 @@ import sortMatrixByNumberOfRepetitionsAndValue from "./exercises/sort-matrix-by-
 import genericTraverseMatrixDiagonally from "./exercises/traverse-matrix/traverse-matrix-diagonally/genericTraverseMatrixDiagonally?raw";
 import traverseMatrixSpiral from "./exercises/traverse-matrix/traverse-matrix-spiral/traverseMatrixSpiral?raw";
 import zigZagTraverseMatrixDiagonally from "./exercises/traverse-matrix/zig-zag-traverse-matrix-diagonally/zigZagTraverseMatrixDiagonally?raw";
+import invertBinaryTree from "./exercises/invert-binary-tree/invertBinaryTree?raw";
 
 export const ExerciseExamples: React.FC = () => {
     return (
@@ -62,6 +63,9 @@ export const ExerciseExamples: React.FC = () => {
             </ExerciseExample>
             <ExerciseExample header="zigZagTraverseMatrixDiagonally">
                 {zigZagTraverseMatrixDiagonally}
+            </ExerciseExample>
+            <ExerciseExample header="invertBinaryTree">
+                {invertBinaryTree}
             </ExerciseExample>
         </>
     );
