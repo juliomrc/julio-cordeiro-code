@@ -10,11 +10,11 @@ export const AtMostOneDigitSwapExercise: React.FC = () => {
             exerciseFiles={[
                 {
                     content: atMostOneDigitSwap,
-                    name: "atMostOneDigitSwap.js",
+                    name: "atMostOneDigitSwap.ts",
                 },
                 {
                     content: atMostOneDigitSwapTest,
-                    name: "atMostOneDigitSwap.test.js",
+                    name: "atMostOneDigitSwap.test.ts",
                 },
             ]}
         />
