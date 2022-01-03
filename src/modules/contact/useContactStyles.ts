@@ -13,6 +13,6 @@ export const useContactStyles = makeStyles((theme) => ({
         textAlign: "justify",
     },
     successAlert: {
-        backgroundColor: theme.palette.success.main,
+        backgroundColor: `${theme.palette.success.main} !important`,
     },
 }));

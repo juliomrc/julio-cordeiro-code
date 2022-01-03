@@ -9,6 +9,8 @@ Welcome to my personal portfolio website.
 
 ## Netlify integration
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d07adb5f-87f0-4ff2-9d07-bf82c327d3df/deploy-status)](https://app.netlify.com/sites/julio-cordeiro/deploys)
+
 -   [Netlify serverless functions](https://docs.netlify.com/functions/build-with-javascript/)
 -   Locally testing serverless functions with [Netlify CLI](https://docs.netlify.com/cli/get-started/)
 -   -   Set up: `netlify login`
@@ -16,6 +18,7 @@ Welcome to my personal portfolio website.
 -   [Environment variables](https://docs.netlify.com/configure-builds/environment-variables/)
 -   [Deployments](https://docs.netlify.com/site-deploys/create-deploys/#deploy-with-git)
 -   -   `npm run deploy` grabs files from generated dist folder on every master push
+-   Set up correct [Node & other dependencies versions](https://docs.netlify.com/configure-builds/manage-dependencies/)
 
 ## Improvements TODO:
 
