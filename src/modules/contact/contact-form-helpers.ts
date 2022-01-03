@@ -2,6 +2,7 @@ import { FormValidators } from "react-simple-form-manager";
 
 export interface ContactForm {
     email: string;
+    name: string;
     subject: string;
     body: string;
 }
@@ -13,6 +14,7 @@ const emailRegex =
 
 export const contactFormValidator: FormValidators<ContactForm> = {
     email: (email: string) => !email || !email.match(emailRegex),
+    name: (name: string) => !name,
     subject: (subject: string) => !subject || subject.length < 2,
     body: (body: string) => !body || body.length < 10,
 };

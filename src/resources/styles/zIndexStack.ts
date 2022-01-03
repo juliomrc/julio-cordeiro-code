@@ -1,6 +1,6 @@
 export const zIndexStack = {
-    requestStateOverlay: 1,
-    requestStateContent: 2,
+    overlay: 1,
+    overlayContent: 2,
     menuContainer: 3,
     menuBurgerIcon: 4,
 };

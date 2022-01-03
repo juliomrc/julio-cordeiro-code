@@ -3,3 +3,5 @@
   from = "/*"
   to = "/index.html"
   status = 200
+[functions]
+  directory = "functions"

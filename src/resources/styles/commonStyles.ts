@@ -8,3 +8,11 @@ export const centeredFullContent: CSSProperties = {
     height: "100%",
     width: "100%",
 };
+
+export const absolutePositionedFullContent: CSSProperties = {
+    position: "absolute",
+    height: "100%",
+    width: "100%",
+    left: 0,
+    top: 0,
+};

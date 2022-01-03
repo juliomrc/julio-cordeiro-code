@@ -12,4 +12,7 @@ export const useContactStyles = makeStyles((theme) => ({
         width: "100%",
         textAlign: "justify",
     },
+    successAlert: {
+        backgroundColor: theme.palette.success.main,
+    },
 }));

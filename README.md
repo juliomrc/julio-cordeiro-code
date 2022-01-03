@@ -1,3 +1,28 @@
 # julio-cordeiro-code
 
-This will be my personal portfolio website.
+Welcome to my personal portfolio website.
+
+## Local set up:
+
+-   npm i
+-   npm run start-dev
+
+## Netlify integration
+
+-   [Netlify serverless functions](https://docs.netlify.com/functions/build-with-javascript/)
+-   Locally testing serverless functions with [Netlify CLI](https://docs.netlify.com/cli/get-started/)
+-   -   Set up: `netlify login`
+-   -   Run: `npm run build-prd && netlify dev` (`netlify dev` will grab the contents of dist folder)
+-   [Environment variables](https://docs.netlify.com/configure-builds/environment-variables/)
+-   [Deployments](https://docs.netlify.com/site-deploys/create-deploys/#deploy-with-git)
+-   -   `npm run deploy` grabs files from generated dist folder on every master push
+
+## Improvements TODO:
+
+-   Adopt/implement focus trap for the overlay & menu
+-   Adopt/implement some fetch library to handle types, error handling, etc.
+-   Create "API Types" connection with serverless functions
+-   Local hot reload for serverless functions
+-   -   `netlify dev` supports functions hot reload, `npm run start-dev` supports js & css hot reload
+-   -   (Optionally) Run in parallel to support full hot reload
+-   -   Integrate. If necessary, add local and prd domains

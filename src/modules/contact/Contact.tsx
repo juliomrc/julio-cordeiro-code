@@ -7,14 +7,14 @@ import { useContactStyles } from "./useContactStyles";
 import { SectionParagraph } from "@components/text/section-paragraph";
 import { Button } from "@components/inputs/button";
 import { LinkedinLink } from "@components/contact-items";
-import { ContactForm, contactFormValidator } from "./contact-form-helpers";
-import { useFormManager } from "@components/form-management/use-form-manager";
+import { useContact } from "./useContact";
+import { APIRequestState } from "@components/api-request-sate-handler/api-request-state";
+import { Alert } from "@components/alert";
+import { Overlay } from "@components/overlay";
 
 export const Contact: React.FC = () => {
-    const formManager = useFormManager<ContactForm>({
-        onSubmit: (formState) => console.log(formState),
-        validators: contactFormValidator,
-    });
+    const { requestState, formManager, handleCloseAlert, showSuccess } =
+        useContact();
 
     const styles = useContactStyles();
 
@@ -25,14 +25,11 @@ export const Contact: React.FC = () => {
                 className={styles.formContainer}
                 onSubmit={formManager.handleSubmit}
             >
+                <APIRequestState requestState={requestState} />
                 <InputsColumn>
                     <SectionParagraph>
                         Send me an email and I will get back to you as soon as
                         possible. You can also reach out on <LinkedinLink />.
-                    </SectionParagraph>
-                    <SectionParagraph>
-                        P.S: The BE is not implemented yet, so <LinkedinLink />{" "}
-                        is definitely the best option.
                     </SectionParagraph>
                     <TextInput
                         className={styles.firstInput}
@@ -46,6 +43,18 @@ export const Contact: React.FC = () => {
                         helperText={
                             formManager.visibleErrors.email &&
                             "Please type a valid email"
+                        }
+                    />
+                    <TextInput
+                        label={"Name"}
+                        onValueChange={formManager.updaterAndValidatorForField(
+                            "name",
+                        )}
+                        value={formManager.formState.name}
+                        error={formManager.visibleErrors.name}
+                        helperText={
+                            formManager.visibleErrors.name &&
+                            "Let me know your name"
                         }
                     />
                     <TextInput
@@ -72,6 +81,15 @@ export const Contact: React.FC = () => {
                             "Please type a more descriptive body"
                         }
                     />
+                    <Overlay show={showSuccess}>
+                        <Alert
+                            className={styles.successAlert}
+                            onClose={handleCloseAlert}
+                        >
+                            Success! I should be receiving an email by now and
+                            I'll get back as soon as possible.
+                        </Alert>
+                    </Overlay>
                     <Button type="submit">Send</Button>
                 </InputsColumn>
             </form>

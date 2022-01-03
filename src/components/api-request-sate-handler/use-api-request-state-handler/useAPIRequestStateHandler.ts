@@ -34,14 +34,16 @@ export const useAPIRequestStateHandler = () => {
         });
     };
 
-    const standardAPIRequestWrap = (apiFetchFunction: () => Promise<void>) => {
-        const standardWrappedRequest = async () => {
+    const standardAPIRequestWrap = <TArgs>(
+        apiFetchFunction: (...args: TArgs[]) => Promise<void>,
+    ) => {
+        const standardWrappedRequest = async (...args: TArgs[]) => {
             try {
                 handleStartLoading();
-                await apiFetchFunction();
+                await apiFetchFunction(...args);
                 handleLoadingFinished();
             } catch (exception) {
-                handleCaughtException(exception);
+                handleCaughtException(exception as APIResponseError);
             }
         };
 
