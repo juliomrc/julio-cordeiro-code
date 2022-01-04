@@ -12,6 +12,11 @@ export const coreSkills: SkillDefinition[] = [
         hoverProgressLabel: "Type safety is life.",
     },
     {
+        name: "Javascript",
+        percentage: 90,
+        hoverProgressLabel: "Not without typescript anymore.",
+    },
+    {
         name: "Webpack",
         percentage: 85,
         hoverProgressLabel: "Been through documentation hell and survived.",
@@ -33,20 +38,20 @@ export const coreSkills: SkillDefinition[] = [
 
 export const otherTechnologies: SkillDefinition[] = [
     {
-        name: "Javascript",
-        percentage: 80,
-        hoverProgressLabel: "Not without typescript anymore.",
-    },
-    {
         name: "React Native",
         percentage: 70,
+    },
+    {
+        name: "Svelte",
+        percentage: 40,
+        hoverProgressLabel: "Just started, but excited!",
     },
     {
         name: "C#",
         percentage: 50,
     },
     {
-        name: "MVC",
+        name: ".NET MVC",
         percentage: 40,
     },
     {
@@ -54,7 +59,12 @@ export const otherTechnologies: SkillDefinition[] = [
         percentage: 75,
     },
     {
-        name: "Rest",
+        name: "REST",
         percentage: 80,
+    },
+    {
+        name: "Serverless",
+        percentage: 40,
+        hoverProgressLabel: "Just started, but excited!",
     },
 ];
