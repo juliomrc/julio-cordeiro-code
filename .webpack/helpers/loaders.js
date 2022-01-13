@@ -12,7 +12,7 @@ const rawImports = {
 
 const getJsTsLoaders = (isHotDevelopment) => {
     return {
-        test: /\.(js|ts(x?))$/,
+        test: /\.[tj]sx?$/,
         ...noLoadersForRawImportsResourceQuery,
         exclude: /node_modules/,
         use: {
@@ -27,7 +27,7 @@ const getJsTsLoaders = (isHotDevelopment) => {
 };
 
 const styleLoaders = {
-    test: /\.(scss|sass|css)$/,
+    test: /\.(s[ca]ss|css)$/,
     ...noLoadersForRawImportsResourceQuery,
     exclude: /node_modules/,
     use: [
@@ -47,7 +47,7 @@ const styleLoaders = {
 };
 
 const fontLoaders = {
-    test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+    test: /\.(woff2?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
     type: "asset/resource",
 };
 
