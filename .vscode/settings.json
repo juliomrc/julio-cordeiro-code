@@ -3,5 +3,6 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "javascript.preferences.quoteStyle": "double",
-    "typescript.preferences.quoteStyle": "double"
+    "typescript.preferences.quoteStyle": "double",
+    "cSpell.words": ["verivest"]
 }

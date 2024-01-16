@@ -4,6 +4,7 @@ export const aboutSections = [
     "Puzzle",
     "Bank Millennium",
     "Memcare",
+    "Verivest",
 ] as const;
 
 export type AboutSection = typeof aboutSections[number];

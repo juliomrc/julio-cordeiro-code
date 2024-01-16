@@ -13,6 +13,7 @@ import { AsyncSkills } from "@modules/skills/AsyncSkills";
 import { AsyncThreeJS } from "@modules/three-js/AsyncThreeJs";
 import { AsyncRecoil } from "@modules/recoil/AsyncRecoil";
 import { AsyncJavascriptExercises } from "@modules/javascript-exercises/AsyncJavascriptExercises";
+import { AsyncContinuousEducation } from "@modules/continuous-education/AsyncContinuousEducation";
 
 export const Routing: React.FC = () => {
     return (
@@ -29,6 +30,11 @@ export const Routing: React.FC = () => {
                     exact
                     path={routes.javascriptExercises}
                     component={AsyncJavascriptExercises}
+                />
+                <Route
+                    exact
+                    path={routes.continuousEducation}
+                    component={AsyncContinuousEducation}
                 />
                 <Route component={AsyncNoMatch} />
             </AnimatedSwitch>

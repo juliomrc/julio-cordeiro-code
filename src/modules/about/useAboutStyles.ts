@@ -11,7 +11,7 @@ export const useAboutStyles = makeStyles((theme) => {
         stepper: {
             position: "fixed",
             left: 0,
-            height: "300px",
+            height: "345px",
             top: "calc(50% - 150px)",
             width: stepperWidth,
             borderTopRightRadius: "12px",

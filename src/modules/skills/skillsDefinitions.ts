@@ -8,22 +8,22 @@ export const coreSkills: SkillDefinition[] = [
     },
     {
         name: "Typescript",
-        percentage: 90,
+        percentage: 95,
         hoverProgressLabel: "Type safety is life.",
     },
     {
         name: "Javascript",
-        percentage: 90,
+        percentage: 95,
         hoverProgressLabel: "Not without typescript anymore.",
     },
     {
         name: "Webpack",
-        percentage: 85,
+        percentage: 95,
         hoverProgressLabel: "Been through documentation hell and survived.",
     },
     {
         name: "HTML",
-        percentage: 85,
+        percentage: 90,
         hoverProgressLabel: "Nothing to add, just a nice hover.",
     },
     {
@@ -56,7 +56,7 @@ export const otherTechnologies: SkillDefinition[] = [
     },
     {
         name: "Less&Sass",
-        percentage: 75,
+        percentage: 80,
     },
     {
         name: "REST",

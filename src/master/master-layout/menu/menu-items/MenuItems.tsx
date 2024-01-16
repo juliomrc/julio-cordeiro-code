@@ -18,6 +18,9 @@ export const MenuItems: React.FC<MenuItemsProps> = ({ onItemClick }) => {
             <MenuItem onClick={onItemClick} to={routes.javascriptExercises}>
                 Javascript exercises
             </MenuItem>
+            <MenuItem onClick={onItemClick} to={routes.continuousEducation}>
+                Continuous education
+            </MenuItem>
         </>
     );
 };

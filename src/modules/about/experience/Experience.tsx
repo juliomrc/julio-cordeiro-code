@@ -115,18 +115,65 @@ export const Experience: React.FC = () => {
                 description={
                     <>
                         After working in the corporate world, I wanted to try
-                        the opposite: a small startup environment. Currently I
-                        work for{" "}
+                        the opposite: a small startup environment. I worked for{" "}
                         <Link
                             target="_blank"
                             href="https://www.memcare.com/en/"
                         >
                             Memcare
                         </Link>
-                        . We offer a few different products, but mostly I work
-                        on a CRM for funeral houses. I am responsible for the
-                        whole FE ecosystem and the whole development team has
-                        two FE, two BE developers and one QA tester.
+                        for one year. Memcare offers a few different products,
+                        but mostly I worked on a CRM for funeral houses. I was
+                        responsible for the whole FE ecosystem and the whole
+                        development team had two FE, two BE developers and one
+                        QA tester.
+                    </>
+                }
+            />
+            <ExperienceSection
+                stepId={"Verivest"}
+                title={"Verivest"}
+                technologies={[
+                    "React",
+                    "typescript",
+                    "javascript",
+                    "jest",
+                    "testing-library",
+                    "cypress",
+                    "playwright",
+                    "eslint",
+                    "prettier",
+                    "yarn",
+                    "yarn-workspaces",
+                    "node.js",
+                    "Github Actions",
+                    "AWS",
+                    "docker",
+                    "esbuild",
+                    "razzle",
+                    "after.js",
+                    "@chakra-ui",
+                    "react-hook-form",
+                    "json:api",
+                    "stripe-js",
+                    "ES6",
+                ]}
+                description={
+                    <>
+                        My last work experience was at{" "}
+                        <Link target="_blank" href="https://verivest.com/">
+                            Verivest
+                        </Link>
+                        , where I worked for two years. Verivest is a
+                        real-estate middle market platform. I led the frontend
+                        team and worked in quite a few different projects, but
+                        the most interesting was for me was working on FE
+                        infrastructure solutions. I set up multiple developer
+                        QoL tools, built a monorepo to support sharing code
+                        between our multiple FE solutions, handled pipeline
+                        automation with Github Actions and I built a E2E testing
+                        framework based on Playwright (the last one being
+                        clearly the coolest).
                     </>
                 }
             />

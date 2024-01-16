@@ -5,6 +5,8 @@ import { SectionParagraph } from "@components/text/section-paragraph";
 import { useSkillsStyles } from "./useSkillsStyles";
 import { SkillBarGroup } from "./skill-bar-group";
 import { coreSkills, otherTechnologies } from "./skillsDefinitions";
+import { Link } from "@components/inputs/link";
+import { routes } from "@resources/constants/routes";
 
 export const Skills: React.FC = () => {
     const styles = useSkillsStyles();
@@ -12,9 +14,16 @@ export const Skills: React.FC = () => {
         <div className={styles.centeredFullContent}>
             <PageHeader>Skills</PageHeader>
             <SectionParagraph>
-                Proactive, autonomous, quick learner and great teacher. Capable
-                of building the whole frontend product and glad to take
-                ownership of the development.
+                Demonstrated prowess in frontend architecture, excelling in
+                scalable and resilient solutions. Glad to assume ownership of
+                development. Enthusiastic about learning new technologies.
+            </SectionParagraph>
+            <SectionParagraph>
+                Note: This website was built as a small project and I wanted to
+                build a small animation like the one bellow, so the values might
+                not be up to date. Better check the{" "}
+                <Link to={routes.about}>about</Link> section and download my CV
+                for the most up to date information.
             </SectionParagraph>
             <TwoColumns singleColumnMobile breakpoint="xs">
                 <SkillBarGroup title="Core technologies" skills={coreSkills} />

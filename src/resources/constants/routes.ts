@@ -7,4 +7,5 @@ export const routes = {
     threeJS: "/three-js",
     recoil: "/recoil",
     javascriptExercises: "/javascript-exercises",
+    continuousEducation: "/continuous-education",
 };

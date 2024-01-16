@@ -24,14 +24,14 @@ export const JavascriptExercises: React.FC = () => {
             <SectionParagraph>
                 To understand the nitty gritty of the work I do, it is obviously
                 important for me to understand the little details of Javascript.
-                I have recently gone through{" "}
+                I went through{" "}
                 <Link
                     target="_blank"
                     href="https://github.com/getify/You-Dont-Know-JS"
                 >
                     You don't know JS
                 </Link>{" "}
-                (which I recommend) while doing these exercises.
+                (which I recommend) while starting these exercises.
             </SectionParagraph>
             <ExerciseExamples />
         </>
